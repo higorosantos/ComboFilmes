@@ -54,6 +54,18 @@ nav ul{
 nav.black ul{
     background: #21d192;
 }
+nav.black ul li a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 20px;
+    }
+    nav.black ul li a:hover{
+        text-decoration:none;
+        color:#21d192;
+    }
+    nav.black ul li:hover{
+        background-color: #000;
+    }
 
 nav ul li{
     display: inline-block;
@@ -61,11 +73,14 @@ nav ul li{
 }
 
 nav ul li a{
-    text-decoration: none;
+    text-decoration:none;
     color: #fff;
     font-size: 20px;
-}
-
+    }
+    nav ul li a:hover{
+        text-decoration:none;
+        color:#21d192;
+    }
 .menu-icon{
     width: 100%;
     background: #000;
@@ -80,11 +95,7 @@ nav ul li a{
     width: 300px;
     display: inline;
 }
-#toma{
-    float: right;
-    margin-top: 1.4em;
-    margin-right: 1.5em;
-}
+
 #sair{
     display: inline;
     margin-left: 160px;
@@ -95,6 +106,95 @@ body{
     background-color: rgba(0, 0, 0, 0.925);
     color: #fff;
 }
+#login2{
+    margin-top: 15px;
+    margin-right: 5px;
+    background-color: #fff;
+    color: slategray;
+    float: right;
+}
+/*MODAl CUIDADO CARAI*/
+.container{
+    height: 100%;
+    align-content: center;
+    }
+    
+    .card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+    }
+    
+    .social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+    }
+    
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    
+    .social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+    }
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+    
+    .remember{
+    color: white;
+    }
+    
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+    
+    .login_btn{
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    
+    .links{
+    color: white;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }
+    .modal-content{
+        background-color: #21d192;
+    }
+    /*Mexe não hein*/
 
 @media (max-width: 580px){
     .logo{
@@ -105,15 +205,17 @@ body{
 
     nav ul{
         max-height: 0px;
-        background: #000;
+        background: #21d192;
+        
     }
 
     nav.black ul{
         background: #000;
+        
     }
 
     .showing{
-        max-height: 43em;
+        max-height: 45em;
     }
 
     nav ul li{
@@ -121,15 +223,29 @@ body{
         width: 100%;
         padding:24px 0;    
         text-align: center;
+        border-bottom-style:solid;
+        border-width: 2px;
+    }
+    nav ul li:hover{
+        background: #000;
+    }
+    nav ul li a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 20px;
+    }
+    nav ul li a:hover{
+        text-decoration:none;
+        color:#21d192;
     }
     
     .menu-icon{
         display: block;
     }
 
-    #toma{
+    #login2{
         display: inline-block;
-        float:none;
-        margin-left: 2em;
+        float: none;
+
     }
 }   

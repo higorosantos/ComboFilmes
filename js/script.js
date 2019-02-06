@@ -8,27 +8,9 @@ $(document).ready(function () {
 $(window).on("scroll", function () {
     if ($(window).scrollTop()) {
         $('nav').addClass('black');
+        $('nav ul').removeClass("showing")
     }
     else {
         $('nav').removeClass('black');
     }
 });
-$(document).ready(function () {
-    $("#book").hide();
-    
-    if ($("#book").hide()) {
-        $("#toma").click(function(){
-            $("#book").fadeIn(500);
-        });
-    }
-    
-});
-$(document).ready(function () {
-    
-    if ($("#book").hide()) {
-        $("#sair").click(function(){
-            $("#book").fadeOut(500);
-        });
-    }
-});
-    
