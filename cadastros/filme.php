@@ -33,7 +33,7 @@ if($_SESSION["privilegio"] == 2 ){
         <label >Sinopse</label> <textarea rows="4" cols="50"  name="sinopse" style='width:350px;height:100px;border-radius:5px;'></textarea><br /><br />
         URL da imagem <input type="text" name="Url"style='border-radius:5px;><br' /><br />
         <button class="button" type="submit" name="Cadastrar" id="incluir" style='width:200px;border-radius:5px;' >Cadastrar</button>
-        <a href="../principal.php"><button class="button" type="button" name="Retornar" id="incluir" style="width:200px;border-radius:5px;" >Retornoar</button>
+        <a href="../principal.php"><button class="button" type="button" name="Retornar" id="incluir" style="width:200px;border-radius:5px;" >Retornar</button>
     </form>
 
 </body>
