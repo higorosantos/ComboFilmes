@@ -103,7 +103,7 @@ if(isset($_SESSION["nome"])  != ""){
               </div>
               <div class="card-footer">
                 <div class="d-flex justify-content-center links">
-                  Não tem uma conta ?<a href="#">Criar Conta</a>
+                  Não tem uma conta ?<a href="cadastro.php">Criar Conta</a>
                 </div>
               </div>
             </div>
