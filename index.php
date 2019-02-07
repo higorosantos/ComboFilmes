@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(isset($_SESSION["nome"])  != ""){
+  echo "<script>window.location='principal.php';</script>";
+}
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -52,11 +62,11 @@
     </header>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" >
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" name="close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -66,32 +76,28 @@
             <div class="card">
               <div class="card-header">
                 <h3>Login</h3>
-                <div class="d-flex justify-content-end social_icon">
-                  <span><i class="fab fa-facebook-square"></i></span>
-                  <span><i class="fab fa-google-plus-square"></i></span>
-                  <span><i class="fab fa-twitter-square"></i></span>
-                </div>
+               
               </div>
               <div class="card-body">
-                <form>
+                <form method="POST" action="acesso.php">
                   <div class="input-group form-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-user"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="username">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
                     
                   </div>
                   <div class="input-group form-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-key"></i></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="password">
+                    <input type="password" class="form-control" name="pwd" placeholder="Senha">
                   </div>
                   <div class="row align-items-center remember">
                     <input type="checkbox">Salvar
                   </div>
                   <div class="form-group">
-                    <input type="submit" value="Login" class="btn float-right login_btn">
+                    <input type="submit" name="logar" value="Login" class="btn float-right login_btn">
                   </div>
                 </form>
               </div>
@@ -99,17 +105,26 @@
                 <div class="d-flex justify-content-center links">
                   Não tem uma conta ?<a href="#">Criar Conta</a>
                 </div>
-                <div class="d-flex justify-content-center">
-                  <a href="#">Esqueci minha senha?</a>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Fazer Login</button>
+      <?php
+              
+              if(isset($_GET["error"])){
+
+                //abrir a form de login RUAN
+                //echo '';
+                echo '<div class="d-flex justify-content-center">';
+                echo '<div class="alert alert-danger">';
+                echo '<strong>Email ou Senha Incorretos!</strong>Por favor verifique os dados digitados.';
+                echo '</div>';
+                echo '</div>';
+              
+            }
+         ?> 
       </div>
     </div>
   </div>
@@ -261,7 +276,10 @@
 </footer>
 <!-- Footer -->
 
-  
+
+<script>
+</script>
+
 </body>
 
 </html>
