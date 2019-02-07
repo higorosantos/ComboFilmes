@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+if($_SESSION["privilegio"] == 2 ){
+?>
 <html>
 
 <head>
@@ -32,5 +37,15 @@
     </form>
 
 </body>
+<?php
+}
+else{
+    echo "<script>window.location='../principal.php';</script>";
+}
+
+?>
+
+
 
 </html>
+
