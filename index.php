@@ -9,7 +9,7 @@ if(isset($_SESSION["nome"])  != ""){
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <!-- Required meta tags -->
@@ -79,7 +79,7 @@ if(isset($_SESSION["nome"])  != ""){
                
               </div>
               <div class="card-body">
-                <form method="POST" action="acesso.php">
+                <form method="POST" action="acao/acesso.php">
                   <div class="input-group form-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-user"></i></span>
