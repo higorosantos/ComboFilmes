@@ -12,11 +12,11 @@ if($_SESSION["privilegio"] == 2 ){
 
 <body class="dody">
     <form name="form" method="POST" action="../acao/cadastrando_filme.php">
-        Titulo do Filme <input type="text" name="Titulo" /><br /><br />
-        Genero <input type="text" name="Genero" /><br /><br />
-        Pais de origem <input type="test" name="Pais" /><br /><br />
+        Titulo do Filme <input type="text" name="Titulo"Style='border-radius:5px;' /><br /><br />
+        Genero <input type="text" name="Genero"Style='border-radius:5px;' /><br /><br />
+        Pais de origem <input type="test" name="Pais" Style='border-radius:5px;'/><br /><br />
         <div style='float:right;margin-right:55px;'>
-            <label for="inputEvento">Censura</label>
+            <label for="inputEvento"Style='border-radius:5px;'>Censura</label>
             <select name="Censura" id="Censura" /><br /><br />
             <option value="0">Livre</option>
             <option value="10">10</option>
@@ -28,12 +28,12 @@ if($_SESSION["privilegio"] == 2 ){
             </select><br><br><br>
         </div>
 
-        Duração <input type="text" name="Duracao" style='width:100px;' />
+        Duração <input type="text" name="Duracao" style='width:100px;border-radius:5px;' />
 
-        <label >Sinopse</label> <textarea rows="4" cols="50"  name="sinopse" style='width:350px;height:100px'></textarea><br /><br />
-        URL da imagem <input type="text" name="Url"><br /><br />
-        <button class="button" type="submit" name="Cadastrar" id="incluir" style="width:200px" >Cadastrar</button>
-        <a href="../principal.php"><button class="button" type="button" name="Retornar" id="incluir" style="width:200px" >Retornoar</button>
+        <label >Sinopse</label> <textarea rows="4" cols="50"  name="sinopse" style='width:350px;height:100px;border-radius:5px;'></textarea><br /><br />
+        URL da imagem <input type="text" name="Url"style='border-radius:5px;><br' /><br />
+        <button class="button" type="submit" name="Cadastrar" id="incluir" style='width:200px;border-radius:5px;' >Cadastrar</button>
+        <a href="../principal.php"><button class="button" type="button" name="Retornar" id="incluir" style="width:200px;border-radius:5px;" >Retornoar</button>
     </form>
 
 </body>
