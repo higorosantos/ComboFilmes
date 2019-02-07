@@ -2,7 +2,7 @@
 
 session_start();
 $_SESSION["acesso"] = 1;
-include  "config.php";
+include  "../config.php";
 
 
 $resultado = NULL;
@@ -16,7 +16,7 @@ if($resultado == 0){
     $_SESSION["nome"] = NULL;
     
   
-    echo "<script>window.location='index.php?error';</script>";
+    echo "<script>window.location='../index.php?error';</script>";
     
   
     
@@ -34,7 +34,7 @@ else {
    $_SESSION["nome"] = $nome;
    $_SESSION["id"] = $id;   
    if($privilegio == 1 || $privilegio == 2){
-   echo "<script>window.location='principal.php';</script>";
+   echo "<script>window.location='../principal.php';</script>";
 
    /*
    0 = Banido.
