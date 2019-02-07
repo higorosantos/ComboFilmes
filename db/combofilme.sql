@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 06-Fev-2019 às 00:33
+-- Generation Time: 08-Fev-2019 às 00:39
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -47,8 +47,16 @@ CREATE TABLE `filme` (
   `duracao` int(11) NOT NULL,
   `pais_origem` varchar(10) NOT NULL,
   `censura` int(11) NOT NULL,
-  `url_img` varchar(100) NOT NULL
+  `url_img` varchar(100) NOT NULL,
+  `sinopse` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `filme`
+--
+
+INSERT INTO `filme` (`id_filme`, `titulo`, `genero`, `duracao`, `pais_origem`, `censura`, `url_img`, `sinopse`) VALUES
+(1, 'Meu malvado favorito', 'Comédia', 120, 'USA', 0, 'https://www.youtube.com/watch?v=lkDyX8C5N-4', 'Gru é mau...');
 
 -- --------------------------------------------------------
 
@@ -70,10 +78,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `pwd`, `privilegio`, `data_cadastro`) VALUES
-(1, 'Higor Oliveira', 'higor@hotmail.com', '34093800', '1', '0000-00-00'),
-(2, 'Ruan', 'ruan@hotmail.com', '123456', '1', '0000-00-00'),
-(3, 'Lucas', 'lucas@hotmail.com', '123456', '1', '2019-02-05'),
-(4, 'Rafael', 'rafael@gmail.com', '123456', '1', '2019-02-05');
+(1, 'Higor Oliveira', 'higor@hotmail.com', '34093800', '2', '0000-00-00'),
+(2, 'Ruan', 'ruan@hotmail.com', '123456', '2', '0000-00-00'),
+(3, 'Lucas', 'lucas@hotmail.com', '123456', '2', '2019-02-05'),
+(4, 'Rafael', 'rafael@gmail.com', '123456', '2', '2019-02-05');
 
 --
 -- Indexes for dumped tables
@@ -99,7 +107,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `filme`
 --
 ALTER TABLE `filme`
-  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `usuario`
