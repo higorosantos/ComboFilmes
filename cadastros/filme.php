@@ -11,7 +11,7 @@ if($_SESSION["privilegio"] == 2 ){
 </head>
 
 <body class="dody">
-    <form name="form" method="POST" action="../acao/cadastrando_filme.php">
+    <form name="form" method="POST" action="../acao/cadastrando_filmes.php">
         Titulo do Filme <input type="text" name="Titulo"Style='border-radius:5px;' /><br /><br />
         Genero <input type="text" name="Genero"Style='border-radius:5px;' /><br /><br />
         Pais de origem <input type="test" name="Pais" Style='border-radius:5px;'/><br /><br />

@@ -1,6 +1,6 @@
 <?php
 
-include "config.php";
+include "../config.php";
 
 $id = NULL;
 $titulo = $_POST["Titulo"];
