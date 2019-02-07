@@ -1,0 +1,32 @@
+Form{
+    background-color: black;
+    border:5px solid #21d192;
+    float:left; 
+    padding:12px;
+    margin-left:500px;
+    margin-top:50px;
+    font: 16px;
+    color:white;
+
+}
+
+form input{
+padding: 4px;
+width:350px;
+display:block;
+
+}
+body{
+    background-image: url(../img/Fundo.jpg);
+    background-size: cover;
+}
+
+button{
+    padding: 0.4em;
+    background-color:#21d192;
+    color:black;
+    border-color: rgba(0, 0,0,0.4);
+
+    }
+
+

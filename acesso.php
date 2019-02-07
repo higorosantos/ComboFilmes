@@ -33,7 +33,7 @@ else {
    $_SESSION["privilegio"] = $privilegio;
    $_SESSION["nome"] = $nome;
    $_SESSION["id"] = $id;   
-   if($privilegio == 1){
+   if($privilegio == 1 || $privilegio == 2){
    echo "<script>window.location='principal.php';</script>";
 
    /*
