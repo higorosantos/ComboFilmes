@@ -61,7 +61,7 @@ if(isset($_SESSION["nome"])  != ""){
       </nav>
     </header>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="mymodal modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:none;">
   <div class="modal-dialog" role="document" >
     <div class="modal-content">
       <div class="modal-header">
@@ -116,7 +116,7 @@ if(isset($_SESSION["nome"])  != ""){
               if(isset($_GET["error"])){
 
                 //abrir a form de login RUAN
-                //echo '';
+                echo '';
                 echo '<div class="d-flex justify-content-center">';
                 echo '<div class="alert alert-danger">';
                 echo '<strong>Email ou Senha Incorretos!</strong>Por favor verifique os dados digitados.';

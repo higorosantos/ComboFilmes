@@ -1,10 +1,13 @@
-
+/*Navbar black mobile*/
 $(document).ready(function () {
     $(".menu-icon").on("click", function () {
         $("nav ul").toggleClass("showing");
     });
 
 });
+/**/
+
+/*Navbar scroll mudar cor */
 $(document).on('scroll', _.debounce(function() {
 $(window).on("scroll", function () {
     if ($(window).scrollTop()) {
@@ -17,3 +20,12 @@ $(window).on("scroll", function () {
 });
 console.log("TomA")
 }, 300));
+/**/
+
+$(document).ready(function () {
+        $("body").addClass('modal-open');
+        $("#exampleModal").addClass('modal fade show');
+        
+        $("#exampleModal").css("display","block");
+    });
+

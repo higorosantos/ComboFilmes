@@ -266,5 +266,8 @@ body{
         float: none;
 
     }
+    .fazendo {
+        display: block;
+    }
 
 }   
