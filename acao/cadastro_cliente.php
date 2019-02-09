@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../config.php";
+date_default_timezone_set('America/Sao_Paulo');
 
 
 
@@ -9,6 +10,7 @@ $nome = $_POST["nome"];
 $senha = $_POST["pwd"];
 $email = $_POST["email"];
 $privilegio = 1;
+$data_cadastro = date('Y-m-d');
 
 $query = NULL;
 $resultado = NULL;
@@ -19,7 +21,7 @@ $resultado = mysqli_num_rows($query);
 
 if ($resultado == 0){
 
-    $query = mysqli_query($conect,"INSERT INTO usuario VALUES ('$id','$nome','$email','$senha','$privilegio')") or die(mysqli_error();
+    $query = mysqli_query($conect,"INSERT INTO usuario VALUES ('$id','$nome','$email','$senha','$privilegio','$data_cadastro')") or die(mysqli_error());
 
 
 }
