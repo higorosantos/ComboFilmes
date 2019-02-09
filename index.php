@@ -9,7 +9,7 @@ if(isset($_SESSION["nome"])  != ""){
 ?>
 
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <!-- Required meta tags -->
@@ -31,6 +31,8 @@ if(isset($_SESSION["nome"])  != ""){
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js'></script>
   <link href="css/estilo.css" rel="stylesheet">
   <script src="js/script.js"></script>
 
@@ -38,30 +40,28 @@ if(isset($_SESSION["nome"])  != ""){
 
 <body>
   <div class="wrapper">
-    <header>
-      <nav>
+    <header  style="z-index:1">
+      <nav  style="z-index:2">
         <div class="menu-icon">
             
           <i class="fa fa-bars fa-2x"></i>
         </div>
-        <div class="logo">
+        <div class="logo img-responsive" >
             <img src="img/Cool Text - COMBO FILMES 314260938724625.png" alt="logomarca">
         </div>
-        <div class="menu">
+         <div >
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contato</a></li>
+
             <button type="button" class="btn btn-primary" id="login2"data-toggle="modal" data-target="#exampleModal">
             Login
             </button>
+           
           </ul>
         </div>
       </nav>
     </header>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="mymodal modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:none;">
   <div class="modal-dialog" role="document" >
     <div class="modal-content">
       <div class="modal-header">
@@ -79,7 +79,7 @@ if(isset($_SESSION["nome"])  != ""){
                
               </div>
               <div class="card-body">
-                <form method="POST" action="acao/acesso.php">
+                <form method="POST" action="acesso.php">
                   <div class="input-group form-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -103,7 +103,7 @@ if(isset($_SESSION["nome"])  != ""){
               </div>
               <div class="card-footer">
                 <div class="d-flex justify-content-center links">
-                  Não tem uma conta ?<a href="cadastro.php">Criar Conta</a>
+                  Não tem uma conta ?<a href="#">Criar Conta</a>
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ if(isset($_SESSION["nome"])  != ""){
               if(isset($_GET["error"])){
 
                 //abrir a form de login RUAN
-                //echo '';
+                echo '';
                 echo '<div class="d-flex justify-content-center">';
                 echo '<div class="alert alert-danger">';
                 echo '<strong>Email ou Senha Incorretos!</strong>Por favor verifique os dados digitados.';
@@ -130,6 +130,23 @@ if(isset($_SESSION["nome"])  != ""){
   </div>
 </div>
 </div>
+
+<!-- The video -->
+<div>
+<video autoplay muted loop id="myVideo" class="embed-responsive">
+  <source src="..\img\Vingadores - Ultimato  -  Cenas Inéditas.mp4" type="video/mp4" style="z-index:0">
+
+</video>
+<div class="content" >
+  <h1>Vingadores: Ultimato</h1>
+  <p>Em Breve na Combo Filmes.</p>
+
+</div>
+
+</div>
+
+<!-- Optional: some overlay text to describe the video -->
+
   <!-- Footer -->
 <footer class="page-footer font-small  lighten-5">
 

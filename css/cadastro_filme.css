@@ -1,6 +1,6 @@
 Form{
-    background-color: #065e3f;
-    border:30px solid #21d192;
+    background-color: black;
+    border:5px solid #21d192;
     float:left; 
     padding:12px;
     margin-left:500px;
@@ -22,11 +22,10 @@ body{
 }
 
 button{
-  
     padding: 0.4em;
-    background-color:rgba(255, 251, 0, 0.849);
+    background-color:#21d192;
     color:black;
-    
+    border-color: rgba(0, 0,0,0.4);
 
     }
 
