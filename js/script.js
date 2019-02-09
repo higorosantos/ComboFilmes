@@ -22,10 +22,4 @@ console.log("TomA")
 }, 300));
 /**/
 
-$(document).ready(function () {
-        $("body").addClass('modal-open');
-        $("#exampleModal").addClass('modal fade show');
-        
-        $("#exampleModal").css("display","block");
-    });
 

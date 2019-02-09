@@ -10,7 +10,7 @@ $query = NULL;
 $senha = $_POST["pwd"];
 $email = $_POST["email"];
 $acao = true;
-$query = mysqli_query($conect, "SELECT * from usuario  WHERE email  = '$email' AND pwd ='$senha' ") or die(mysqli_error());
+$query = mysqli_query($conect, "SELECT * From usuario  WHERE email  = '$email' AND pwd ='$senha' ") or die(mysqli_error());
 $resultado = mysqli_num_rows($query);
 if($resultado == 0){
     $_SESSION["nome"] = NULL;
