@@ -66,7 +66,7 @@ if(isset($_SESSION["nome"])  != ""){
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
-        <button type="button" name="close" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" name="close" id="fechar"class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -117,11 +117,7 @@ if(isset($_SESSION["nome"])  != ""){
 
                 //abrir a form de login RUAN
                 echo '<script>$(document).ready(function () {
-                  $("body").addClass("modal-open");
-                  $("#exampleModal").addClass("modal fade show");
-                  
-                  $("#exampleModal").css("display","block");
-                  
+                  $("#login2").click();
               });
           </script>';
                 echo '<div class="d-flex justify-content-center">';
