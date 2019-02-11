@@ -20,8 +20,6 @@ $(window).on("scroll", function () {
 });
 console.log("TomA")
 }, 300));
-$(document).ready(function () {
-    $("#login2").click();
-});
+
 
 

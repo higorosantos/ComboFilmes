@@ -4,7 +4,7 @@ $data = date('Y-m-d H:i:s');
 
 session_start();
 
-if(($_SESSION["privilegio"] == 1 ||  $_SESSION["privilegio"] == 2 ) && $_SESSION["acesso"] = 1){
+if(($_SESSION["privilegio"] == 1 ||  $_SESSION["privilegio"] == 2 ) AND $_SESSION["acesso"] = 1){
 
   
    $hora1 =  date('d') * 24;
@@ -19,6 +19,8 @@ if(($_SESSION["privilegio"] == 1 ||  $_SESSION["privilegio"] == 2 ) && $_SESSION
 <?php
 echo $_SESSION["nome"];
 
+
+
 ?>
 
 
@@ -28,8 +30,14 @@ echo $_SESSION["nome"];
 <?php
 if($_SESSION["privilegio"] == 2){
 echo '<a href="cadastros/filme.php"><button type="button"  >Cadastrar Filmes</button></a>';
-echo '</form>';
+
+
+echo '<a href="cadastros/gerenciar_usuarios.php"><button type="button"  >Gerenciar Usuarios</button></a>';
+
+
+
 }
+
 ?>
 
 
@@ -41,6 +49,8 @@ echo '</form>';
 
 else{
     echo "<script>window.location='index.php';</script>";
+   
+    
 }
 ?>
 

@@ -22,17 +22,38 @@ if($resultado == 0){
     
 
 }
+elseif(isset($_SESSION["email"]) && isset($_SESSION["pwd"])){
+  $email = $_SESSION["email"];
+  $senha = $_SESSION["pwd"];
+  $query = mysqli_query($conect, "SELECT * From usuario  WHERE email  = '$email' AND pwd ='$senha' ") or die(mysqli_error());
+  $resultado = mysqli_num_rows($query);
+  $registro = mysqli_fetch_row($query);
+  unset($_SESSION["email"]);
+  unset($_SESSION["pwd"]);
+  $id = $registro[0];
+  $nome = $registro[1];
+  $privilegio = $registro[4];
+
+  $_SESSION["privilegio"] = $privilegio;
+  $_SESSION["nome"] = $nome;
+  $_SESSION["id"] = $id;  
+  $_SESSION["acesso"] = 1; 
+  if($privilegio == 1 || $privilegio == 2){
+  echo "<script>window.location='../principal.php';</script>";
+     
+  }
+
+}
 else {
  
    $registro = mysqli_fetch_row($query);
    $id = $registro[0];
    $nome = $registro[1];
-   $email = $registro[2];
-   $senha = $registro[3];
    $privilegio = $registro[4];
    $_SESSION["privilegio"] = $privilegio;
    $_SESSION["nome"] = $nome;
-   $_SESSION["id"] = $id;   
+   $_SESSION["id"] = $id; 
+   $_SESSIOM["acesso"] = 1;  
    if($privilegio == 1 || $privilegio == 2){
    echo "<script>window.location='../principal.php';</script>";
 
