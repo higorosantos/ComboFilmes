@@ -16,6 +16,8 @@ $resultado = mysqli_num_rows($query);
 if ($resultado == 0){
 
     $query = mysqli_query($conect,"INSERT INTO usuario VALUES ('$id','$nome','$email','$senha','$privilegio','$data_cadastro')") or die(mysqli_error());
+
+    //enviar um formulario invisivel
     echo '<form  name="formulario" method="POST" action="acesso.php">';
     echo "<input name='email' type='hidden' value='$email'></input>" ;
     echo "<input name='pwd' type='hidden' value='$senha'></input>";
@@ -52,7 +54,7 @@ for($i = 0; $i < $size ; $i++){
         echo "<script>window.location='../cadastro.php?erro';</script>"; 
 
     }
-
+   
 
 }
 
