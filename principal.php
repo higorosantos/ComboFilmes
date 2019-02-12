@@ -1,56 +1,64 @@
-<?php
-date_default_timezone_set('America/Sao_Paulo');
-$data = date('Y-m-d H:i:s');
+<html>
 
-session_start();
-
-if(($_SESSION["privilegio"] == 1 ||  $_SESSION["privilegio"] == 2 ) AND $_SESSION["acesso"] = 1){
-
-  
-   $hora1 =  date('d') * 24;
-   $hora2 =  (date('d')+5) * 24;
-   echo $hora1;
-
-
-   echo "<br>" ,$hora2;
-   echo "<br>" ,($hora2 - $hora1) / 24;
-?>
-
-<?php
-echo $_SESSION["nome"];
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Combo Filmes</title>
 
 
 
-?>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
 
-<form method="POST"  action="logout.php">
-<button type="submit" >Sair</button>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js'></script>
+  <link href="css/principal.css" rel="stylesheet">
+  <script src="js/script.js"></script>
 
-<?php
-if($_SESSION["privilegio"] == 2){
-echo '<a href="cadastros/filme.php"><button type="button"  >Cadastrar Filmes</button></a>';
+</head>
+  <body>
+    <div class="wrapper">
+      <header style="">
+        <nav style="">
+          <div class="menu-icon">
 
+            <i class="fa fa-bars fa-2x"></i>
+          </div>
+          <div class="logo2 img-responsive">
+            <img src="img/Cool Text - COMBO FILMES 314260938724625.png" alt="logomarca">
+          </div>
+          <div>
+            <ul>
+            </ul>
+          </div>
+        </nav>
+        <div class="dropdown show">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false"><img src="img/kk.jpg">
+                </a>
 
-echo '<a href="cadastros/gerenciar_usuarios.php"><button type="button"  >Gerenciar Usuarios</button></a>';
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Nome</a>
+                  <a class="dropdown-item" href="#">Minha Conta</a>
+                  <a class="dropdown-item" href="#">Minhas Compras</a>
+                  <a class="dropdown-item" href="logout.php">Sair</a>
+                </div>
+              </div>
+      </header>
+</div>
+      <section>
+      
+      </section>
 
+  </body>
 
-
-}
-
-?>
-
-
-
-
-
-<?php
-}
-
-else{
-    echo "<script>window.location='index.php';</script>";
-   
-    
-}
-?>
-
+</html>
