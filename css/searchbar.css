@@ -52,7 +52,8 @@
         .mb-2, .my-2{
             margin-bottom: 0;
         }
-        #formsearch{
+        .formsearch{
             border: 2px solid black;
-            border-radius: 20px ;
+            border-radius: 10px ;
+            width: 70%;
         }

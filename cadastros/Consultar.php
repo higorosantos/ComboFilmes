@@ -3,20 +3,14 @@
 include "../config.php";
 $query = NULL;
 $resultado = NULL;
+
+if(isset($_POST["pesquisa"])){
+
 $pesquisa = $_POST["pesquisa"];
-
-
 
 $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquisa%' ") or die(mysqli_error());
 
-$resultado =  mysqli_fetch_row($query);
-$nome = $resultado[1];
-$email = $resultado[2];
-$senha = $resultado[3];
-$privilegio = $resultado[4];
-
-
-
+}
 
 ?>
 
@@ -48,60 +42,38 @@ $privilegio = $resultado[4];
           <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
          </div>
       </form>
-    </div> 
-    <div class="form-group row"> 
-    <form class="form-inline justify-content-center container " style="margin-top:50px; background-color:white;" id="formsearch">
-  <div class="form-group ">
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="<?php echo $nome; ?>" >
-</div>
-<div class="form-group row"> 
-  <div class="form-group mx-sm-3 ">
-    <input type="email" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value="<?php echo $email; ?>">
-  </div>
-</div>
-<div class="form-group row"> 
-  <div class="form-group mx-sm-3 ">
-    <input type="password" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value="<?php echo $senha; ?>">
-  </div>
-</div>
-<div class="form-group row"> 
-  <div class="form-group mx-sm-3 ">
-    <input type="text" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value="<?php if($privilegio == 1){
-        echo "Usuario";
-    } 
-    else{
-        echo "Administrador";
-    }?>">
-  </div>
-</div>
-  <button type="submit" class="btn btn-primary " style="margin-bottom:0;">Ver</button>
-</form>
-<form class="form-inline justify-content-center container " style="margin-top:50px; background-color:white;" id="formsearch">
-  <div class="form-group ">
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="<?php echo $nome; ?>" >
-</div>
-<div class="form-group row"> 
-  <div class="form-group mx-sm-3 ">
-    <input type="email" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value="<?php echo $email; ?>">
-  </div>
-</div>
-<div class="form-group row"> 
-  <div class="form-group mx-sm-3 ">
-    <input type="password" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value="<?php echo $senha; ?>">
-  </div>
-</div>
-<div class="form-group row"> 
-  <div class="form-group mx-sm-3 ">
-    <input type="text" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value="<?php if($privilegio == 1){
-        echo "Usuario";
-    } 
-    else{
-        echo "Administrador";
-    }?>">
-  </div>
-</div>
-  <button type="submit" class="btn btn-primary " style="margin-bottom:0;">Ver</button>
-</form>
+    </div>
+   <?php
+    if(isset($_POST["pesquisa"])){
+      while($campos = mysqli_fetch_array($query)){
+        echo '<form class="formsearch form-inline justify-content-center container "  style="background-color:white; margin-top:100px;">';
+        echo '<div class="form-group ">';
+        echo '<input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=',$campos["nome"],'" >';
+        echo '</div>';
+        echo '<div class="form-group mx-sm-3 ">';
+        echo ' <input type="email" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value=',$campos["email"],'">';
+        echo '</div>';
+        echo '<div class="form-group mx-sm-3 ">';
+        echo ' <input type="password" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value=',$campos["pwd"],'">';
+        echo '</div>';
+        echo '<div class="form-group mx-sm-3 ">';
+        if(isset($_POST["pesquisa"])){
+          $privilegio = $campos["privilegio"];
 
+          if($campos["privilegio"] == 1){
+            $privilegio = "Usuario";
+          }
+          else{
+            $privilegio = "Administrador";
+          }
+        }
+        echo '<input type="text" readonly class="form-control-plaintext" id="inputPassword2" placeholder="" value=',$privilegio,'>';
+        echo '</div>';
+        echo '<button type="submit" class="btn btn-primary " style="margin-bottom:0;">Ver</button>';
+
+      }
+    } 
+    
+?>
   </body>
 </html>
