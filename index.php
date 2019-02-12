@@ -51,11 +51,9 @@ if(isset($_SESSION["nome"])  != ""){
         </div>
          <div >
           <ul>
-
             <button type="button" class="btn btn-primary" id="login2"data-toggle="modal" data-target="#exampleModal">
             Login
             </button>
-           
           </ul>
         </div>
       </nav>

@@ -14,6 +14,16 @@ header{
     background-image:url('../img/Vingadores - Ultimato  -  Cenas Inéditas.mp4');
     background-size: cover;
 }
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 576px) {
+
+}
 
 .content{
     width: 90%;
@@ -214,7 +224,36 @@ body{
     }
     /*Mexe não hein*/
 
+    .formcad{
+    background-image: url(../img/Fundo.jpg);
+    background-size: cover;
+    width: 100%;
+}
+.form1{
+    color:#fff;
+    margin: 80px;
+    border-style:solid;
+    border-color: #21d192;
+    border-width: 30px;
+    border-radius: 20px;
+    padding:20px;
+    width: 50%;
+    margin-left: 230px;
+    background-color: #0F6547;
+    
+}
+.btn{
+    margin: 20px 14;
+}
+.form-group{
+    margin-top: 25px;
+
+}
+
 @media (max-width: 580px){
+    nav ul{
+        padding:0;
+    }
     .logo{
         position: fixed;
         top: 0;
@@ -233,7 +272,7 @@ body{
     }
 
     .showing{
-        max-height: 45em;
+        max-height: 3em;
     }
 
     nav ul li{
@@ -243,9 +282,6 @@ body{
         text-align: center;
         border-bottom-style:solid;
         border-width: 2px;
-    }
-    nav ul li:hover{
-        background: #000;
     }
     nav ul li a{
     text-decoration:none;
@@ -264,6 +300,11 @@ body{
     #login2{
         display: inline-block;
         float: none;
+        background-color:rgba(0, 0, 0, 0);
+        color: #fff;
+        border-width: 0;
+        width: 100%;
+        font-size: 20pt;
 
     }
     .fazendo {
