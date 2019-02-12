@@ -48,11 +48,11 @@
     </header>
 <body class="formcad">
 <section class="container">
-<form class="form1">
+<form class="form1" method="POST" action="acao/cadastro_cliente.php">
 <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
     <div class>
-      <input type="email" class="form-control" name="nome" id="inputEmail3" placeholder="Email">
+      <input type="text" class="form-control" name="nome" id="inputEmail3" placeholder="Nome">
     </div>
   </div>  
 <div class="form-group">
