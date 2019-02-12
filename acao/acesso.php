@@ -17,10 +17,6 @@ if($resultado == 0){
     
   
     echo "<script>window.location='../index.php?error';</script>";
-    
-    
-  
-    
 
 }
 else {
@@ -32,8 +28,9 @@ else {
    $_SESSION["privilegio"] = $privilegio;
    $_SESSION["nome"] = $nome;
    $_SESSION["id"] = $id; 
-   $_SESSIOM["acesso"] = 1;  
+   $_SESSION["acesso"] = 1;  
    if($privilegio == 1 || $privilegio == 2){
+
    echo "<script>window.location='../principal.php';</script>";
 
    /*

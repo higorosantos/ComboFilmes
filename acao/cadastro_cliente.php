@@ -16,11 +16,13 @@ $resultado = mysqli_num_rows($query);
 if ($resultado == 0){
 
     $query = mysqli_query($conect,"INSERT INTO usuario VALUES ('$id','$nome','$email','$senha','$privilegio','$data_cadastro')") or die(mysqli_error());
-     
-    echo "<form type='hidden'>
-    <labe>
-    </form>"
+    echo '<form  name="formulario" method="POST" action="acesso.php">';
+    echo "<input name='email' type='hidden' value='$email'></input>" ;
+    echo "<input name='pwd' type='hidden' value='$senha'></input>";
+    echo "</form>";
+    echo '<script>document.formulario.submit();</script>';
 
+}
 
 else{
     echo "<script>window.location='../cadastro.php?erro_email';</script>"; 
@@ -70,7 +72,4 @@ else{
 }
 
 }
-
-
-
 ?>
