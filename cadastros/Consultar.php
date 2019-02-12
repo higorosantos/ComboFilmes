@@ -5,6 +5,8 @@ $query = NULL;
 $resultado = NULL;
 $pesquisa = $_POST["pesquisa"];
 
+
+
 $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquisa%' ") or die(mysqli_error());
 
 $resultado =  mysqli_fetch_row($query);
@@ -41,7 +43,7 @@ $privilegio = $resultado[4];
     <form method="POST" action="#">
       <div class="d-flex justify-content-center">
         <div class="searchbar">
-          <input class="search_input" name="pesquisa" type="text" name="" placeholder="Digite o nome do usuario...">
+          <input class="search_input" name="pesquisa" value="" type="text" name="" placeholder="Digite o nome do usuario...">
           <!--<a href="#" class="search_icon"><i class="fas fa-search"></i></a> -->
           <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
          </div>

@@ -1,0 +1,196 @@
+.formcad{
+    background-image: url(../img/Fundo.jpg);
+    background-size: cover;
+    width: 100%;
+}
+.form1{
+    color:#fff;
+    margin: 80px;
+    border-style:solid;
+    border-color: #21d192;
+    border-width: 30px;
+    border-radius: 20px;
+    padding:20px;
+    width: 50%;
+    margin-left: 230px;
+    background-color: #0F6547;
+    
+}
+.btn{
+    margin: 20px 14;
+}
+.form-group{
+    margin-top: 25px;
+
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    background-image:url('../img/Vingadores - Ultimato  -  Cenas Inéditas.mp4');
+    background-size: cover;
+}
+
+.content{
+    width: 90%;
+    margin: 4em auto;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.logo{
+    position: fixed;
+    float: left;
+    margin: 16px 36px;
+    color: #fff;
+    font-weight: bold; 
+    font-size: 24px;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 35px;
+}
+
+nav ul{
+    list-style: none;
+    background: rgba(0,0,0,0);
+    overflow: hidden;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    margin: 0;
+    transition: 1s;
+    height: 50px;
+}
+
+nav.black ul{
+    background: #21d192;
+}
+nav.black ul li a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 20px;
+    }
+    nav.black ul li a:hover{
+        text-decoration:none;
+        color:#21d192;
+    }
+    nav.black ul li:hover{
+        background-color: #000;
+    }
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 20px;
+    }
+    nav ul li a:hover{
+        text-decoration:none;
+        color:#21d192;
+    }
+.menu-icon{
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+#book{
+    width: 300px;
+    display: inline;
+}
+
+#sair{
+    display: inline;
+    margin-left: 160px;
+
+}
+
+
+body{
+    background-color: rgba(0, 0, 0, 0.925);
+    color: #fff;
+}
+#login2{
+    margin-top: 0px;
+    margin-right: 5px;
+    background-color: #fff;
+    color: slategray;
+    float: right;
+    display: none;
+}
+@media (max-width:768px){
+    .form1{
+        width: 80%;
+        margin-left:0;
+    }
+    nav ul{
+        padding:0;
+    }
+    .logo{
+        position: fixed;
+        top: 0;
+        margin-top: 16px;    
+    }
+
+    nav ul{
+        max-height: 0px;
+        background: #21d192;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        
+    }
+
+    .showing{
+        max-height: 3em;
+    }
+
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding:24px 0;    
+        text-align: center;
+        border-bottom-style:solid;
+        border-width: 2px;
+    }
+    nav ul li a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 20px;
+    }
+    nav ul li a:hover{
+        text-decoration:none;
+        color:#21d192;
+    }
+    
+    .menu-icon{
+        display: block;
+    }
+
+    #login2{
+        display: inline-block;
+        float: none;
+        background-color:rgba(0, 0, 0, 0);
+        color: #fff;
+        border-width: 0;
+        width: 100%;
+        font-size: 20pt;
+
+    }
+    .fazendo {
+        display: block;
+    }
+
+}   

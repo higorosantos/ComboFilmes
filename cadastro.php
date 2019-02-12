@@ -23,7 +23,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js'></script>
-    <link href="css/cadastro_filme.css" rel="stylesheet">
+    <link href="css/cadastro.css" rel="stylesheet">
     <script src="js/script.js"></script>
 
 </head>
