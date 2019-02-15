@@ -1,0 +1,8 @@
+.btn{
+    margin-top: 15px;
+}
+body{
+    background: url(../img/Fundo.jpg);
+    background-size: cover;
+    width: 100%;
+}

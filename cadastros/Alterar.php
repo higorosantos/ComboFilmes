@@ -6,37 +6,74 @@ if($_SESSION["privilegio"] == 2 ){
 <html>
 
 <head>
-    <title>Combo Filmes</title>
-    <link rel="stylesheet" href="../css/cadastro_filme.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Combo Filmes</title>
+  <!--font-->
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js'></script>
+  <link href="css/alterar.css" rel="stylesheet">
+  <script src="js/script.js"></script>
+
 </head>
 
-<body class="dody">
-    <form name="form" method="POST" action="../acao/cadastrando_filme.php">
-        Titulo do Filme <input type="text" name="Titulo"Style='border-radius:5px;'  /><br /><br />
-        Genero <input type="text" name="Genero"Style='border-radius:5px;'readonly /><br /><br />
-        Pais de origem <input type="test" name="Pais" Style='border-radius:5px;'readonly/><br /><br />
-        <div style='float:right;margin-right:55px;'>
-            <label for="inputEvento"Style='border-radius:5px;'>Censura</label>
-            <select name="Censura" id="Censura"readonly /><br /><br />
-            <option value="0">Livre</option>
-            <option value="10">10</option>
-            <option value="14">14</option>
-            <option value="16">16</option>
-            <option value="18">18+</option>
+<body>
+<section class="">
+<form class="form1 container">
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
+    <div class>
+      <input type="email" class="form-control" name="nome" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>  
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="">
+      <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Senha</label>
+    <div class="">
+      <input type="password" name="pwd" class="form-control" id="inputEmail3" placeholder="Senha">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-form-label">Privilegio</label>
+    <div class="">
+    <select class="custom-select">
+  <option selected>Escolha o Privilegio</option>
+  <option value="1">Usuário</option>
+  <option value="2">Administrador</option>
+  
+</select>
+    </div>
+    <div class="form-group">
+    <div class="btn">
+      <button type="submit" class="btn btn-primary">Confirma</button>
+      <button type="submit" class="btn btn-primary">Cancelar</button>
+    </div>
+  </div>
+  </div>
+    
+  </div>
 
-
-            </select><br><br><br>
-        </div>
-
-        Duração <input type="text" name="Duracao" style='width:100px;border-radius:5px;'readonly />
-
-        <label >Sinopse</label> <textarea rows="4" cols="50"  name="sinopse" style='width:350px;height:100px;border-radius:5px;'readonly></textarea><br /><br />
-        URL da imagem <input type="text" name="Url"style='border-radius:5px;><br'readonly /><br />
-        <button class="button" type="submit" name="Alterar" id="incluir" style='width:100px;border-radius:5px;' >Alterar</button>
-        <button class="button" type="submit" name="Excluir" id="incluir" style='width:100px;border-radius:5px;' >Exluir</button>
-        <a href=""><button class="button" type="button" name="Retornar" id="incluir" style="width:100px;border-radius:5px;" >Retornar</button>
-    </form>
-
+</form>
 </body>
 <?php
 }

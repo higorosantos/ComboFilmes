@@ -134,12 +134,8 @@ if(isset($_SESSION["nome"])  != ""){
 
 <!-- The video -->
 <div>
-<video autoplay muted loop id="myVideo" class="embed-responsive">
-  <source src="..\img\Vingadores - Ultimato  -  Cenas Inéditas.mp4" type="video/mp4" style="z-index:0">
-
-</video>
-<div class="content" >
-  <h1>Vingadores: Ultimato</h1>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
+  <h1>Frozen 2</h1>
   <p>Em Breve na Combo Filmes.</p>
 
 </div>

@@ -25,33 +25,81 @@ if($_SESSION["privilegio"] == 2 ){
     <link rel="stylesheet" href="../css/cadastro_filme.css">
 </head>
 
-<body>
+<body class="dody">
     <div class="form-group">
-    <form name="form" method="POST" action="../acao/cadastrando_filmes.php">
-        Titulo do Filme <input type="text" name="Titulo"Style='border-radius:5px;' /><br /><br />
-        Genero <input type="text" name="Genero"Style='border-radius:5px;' /><br /><br />
-        Pais de origem <input type="test" name="Pais" Style='border-radius:5px;'/><br /><br />
-        <div style='float:right;margin-right:55px;'>
-            <label for="inputEvento"Style='border-radius:5px;'>Censura</label>
-            <select name="Censura" id="Censura" /><br /><br />
-            <option value="0">Livre</option>
-            <option value="10">10</option>
-            <option value="14">14</option>
-            <option value="16">16</option>
-            <option value="18">18+</option>
-
-
-            </select><br><br><br>
-        </div>
-
-        Duração <input type="text" name="Duracao" style='width:100px;border-radius:5px;' />
-
-        <label >Sinopse</label> <textarea rows="4" cols="50"  name="sinopse" style='width:350px;height:100px;border-radius:5px;'></textarea><br /><br />
-        URL da imagem <input type="text" name="Url"style='border-radius:5px;><br' /><br />
-        <button class="button" type="submit" name="Cadastrar" id="incluir" style='width:200px;border-radius:5px;' >Cadastrar</button>
-        <a href="../principal.php"><button class="button" type="button" name="Retornar" id="incluir" style="width:200px;border-radius:5px;" >Retornar</button>
-    </form>
+    <div class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Titulo do filme</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="Titulo" placeholder="">
+      </div>
     </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Pais de origem</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="Pais" placeholder="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Censura">Censura</label>
+      </div>
+      <div class="col-75">
+        <select id="Censura" name="Censura">
+        <option value="Livre">Livre</option>
+          <option value="10">10</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="+18">+18</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="Genero">Genero</label>
+      </div>
+      <div class="col-75">
+        <select id="Genero" name="Genero">
+          <option value="aventura">Aventura</option>
+          <option value="acao">Ação</option>
+          <option value="comedia">Comédia</option>
+          <option value="terror">Terror</option>
+          <option value="adulto">Adulto</option>
+          <option value="animação">Animação</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Sinopse</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="sinopse" placeholder="" style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row" style="position:relative;">
+        <a class='btn btn-primary' href='javascript:;'>
+            Carregar filme
+            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+        </a>
+        &nbsp;
+        <span class='label label-info' id="upload-file-info"></span>
+</div>
+    <div class="button" >
+    <button  type="submit" name="retornar" id="Retornar" style ='width:200px'/>Retornar</button>
+    <button  type="submit" name="cadastrar" id="Cadastrar" style ='width:200px'/>Cadastrar</button>
+    
+
+   </div>
+   
+   
+</div>
 </body>
 <?php
 }

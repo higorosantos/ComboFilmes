@@ -76,7 +76,7 @@
     <div class="form-group">
     <div class="">
       <button type="submit" class="btn btn-primary">Confirma</button>
-      <button type="submit" class="btn btn-primary">Cancelar</button>
+      <a href="index.php"<button type="button" class="btn btn-primary">Cancelar</button></a>
     </div>
   </div>
   </div>

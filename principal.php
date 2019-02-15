@@ -26,14 +26,14 @@
 
 </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper"style="z-index:1;">
       <header style="">
-        <nav style="">
+        <nav >
           <div class="menu-icon">
 
             <i class="fa fa-bars fa-2x"></i>
           </div>
-          <div class="logo2 img-responsive">
+          <div class="logo2 img-responsive"style="z-index:2;">
             <img src="img/Cool Text - COMBO FILMES 314260938724625.png" alt="logomarca">
           </div>
           <div>
@@ -41,7 +41,7 @@
             </ul>
           </div>
         </nav>
-        <div class="dropdown show">
+        <div class="dropdown show" style="z-index:2;">
                 <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false"><img src="img/kk.jpg">
                 </a>
@@ -55,7 +55,39 @@
               </div>
       </header>
 </div>
-      <section>
+      <section class="teste">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="z-index:-1;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner uh">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img\titans.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+    <h5>Titans</h5>
+    <p>Primeira temporada já Disponivel!</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/lucifer.jpg" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+    <h5>Lucifer</h5>
+    <p>Entediado com a vida nas trevas, o diabo se muda para Los Angeles, abre um piano-bar e empresta sua sabedoria a uma investigadora de assassinatos.
+</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/boneca-russa.jpg" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+    <h5>Boneca Russa</h5>
+    <p> Em seu aniversário de 36 anos, Nadia morre. Mas retorna para morrer de novo. E de novo.</p>
+  </div>
+    </div>
+  </div>
+
+</div>
       
       </section>
 

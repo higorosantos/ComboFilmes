@@ -85,6 +85,16 @@ nav ul li a{
     display: none;
 }
 
+/*carrossel*/
+.carousel-inner img{
+
+    height: 66%;
+    width: 100%;
+}
+.uh{
+    position:absolute;
+    padding-top: 4%;
+}
 body{
     background-color: rgba(0, 0, 0, 0.925);
     color: #fff;
@@ -94,10 +104,14 @@ ul{
 }
 .dropdown{
  float: right;
- margin-right: 80px;
- margin-top: 15px;
+ margin-right: 65px;
+ margin-top: 30px;
  background-color: rgba(0,0,0,0);
     
+}
+.dropdown-menu ul{
+    padding:22px;
+    width: 30%
 }
 .btn{
     background-color: rgba(0,0,0,0);
@@ -106,7 +120,7 @@ ul{
 .logo2{
     float: center;
     width: 20%;
-    margin-left: 42%;
+
     margin-top: 40px;
     position:absolute;
 }
