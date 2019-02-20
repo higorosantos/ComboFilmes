@@ -23,6 +23,3 @@ console.log("TomA")
 
 
 /*carrosel*/
-$('.carousel').carousel({
-    interval: 2000
-  })

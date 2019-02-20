@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+}
+header{
+    height: 60px;
+}
+#logo{
+    margin-top: 40px;
+    position: absolute;
+}
+#carouselmain{
+    margin: 0px;
+}
+.perfil{
+    float: right;
+    margin-right: 25px;
+    
+}
+.btn{
+    background-color: transparent;
+    border: transparent;
+    
+    
+}
+
+.btn:hover{
+    background-color: #21d192;
+    color: black;
+}
+.dropdown-menu{
+    background-color: #21d192;
+}
+.slide{
+    margin-left: 15px;
+}
+.divtext{
+    color: #21d192;
+    margin-left: 30px;
+    margin-top: 30px;
+}

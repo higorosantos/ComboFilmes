@@ -47,7 +47,7 @@ if(isset($_SESSION["nome"])  != ""){
           <i class="fa fa-bars fa-2x"></i>
         </div>
         <div class="logo img-responsive" >
-            <img src="img/Cool Text - COMBO FILMES 314260938724625.png" alt="logomarca">
+            <img src="img/logo.png" alt="logomarca">
         </div>
          <div >
           <ul>
@@ -134,7 +134,7 @@ if(isset($_SESSION["nome"])  != ""){
 
 <!-- The video -->
 <div>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
   <h1>Frozen 2</h1>
   <p>Em Breve na Combo Filmes.</p>
 
