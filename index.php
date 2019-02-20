@@ -134,14 +134,35 @@ if(isset($_SESSION["nome"])  != ""){
 
 <!-- The video -->
 <div>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
   <h1>Frozen 2</h1>
   <p>Em Breve na Combo Filmes.</p>
 
 </div>
 
 </div>
+<section class="testando123" style="background-color: #21d192;">
+  <h1 class="text-center">Planos</h1>
+</section>
+<section id="produtos" class="container2  clearfix">
+        <div>
 
+            <h2>Basíco  R$39,99.</h2>
+            <p>tenha acesso a todo nosso conteúdo, e vire um verdadeiro amante das telas.</p>
+        </div>
+
+        <div>
+
+            <h2>Clássico   R$49,99.</h2>
+            <p>Qualidade Sempre! Assita a todo nosso catálogo em HD.</p>
+        </div>
+
+        <div>
+
+            <h2>Premium    R$59,99</h2>
+            <p>Player em Full HD e acesso antecipado a Filmes e séries Lançamento.</p>
+        </div>
+    </section>
 <!-- Optional: some overlay text to describe the video -->
 
   <!-- Footer -->
