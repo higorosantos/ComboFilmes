@@ -22,4 +22,7 @@ console.log("TomA")
 }, 300));
 
 
-
+/*carrosel*/
+$('.carousel').carousel({
+    interval: 2000
+  })

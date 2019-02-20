@@ -25,7 +25,10 @@ if($_SESSION["privilegio"] == 2 ){
     <link rel="stylesheet" href="../css/cadastro_filme.css">
 </head>
 
-<body class="dody">
+<label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;">Cadastro de Filmes</label>
+
+
+<body class="dody" >
     <div class="form-group">
     <div class="container">
   <form action="action_page.php">
@@ -50,7 +53,7 @@ if($_SESSION["privilegio"] == 2 ){
         <label for="Censura">Censura</label>
       </div>
       <div class="col-75">
-        <select id="Censura" name="Censura">
+        <select id="Censura" name="Censura" style="cursor: pointer">
         <option value="Livre">Livre</option>
           <option value="10">10</option>
           <option value="14">14</option>
@@ -65,7 +68,7 @@ if($_SESSION["privilegio"] == 2 ){
         <label for="Genero">Genero</label>
       </div>
       <div class="col-75">
-        <select id="Genero" name="Genero">
+        <select id="Genero" name="Genero" style="cursor: pointer">
           <option value="aventura">Aventura</option>
           <option value="acao">Ação</option>
           <option value="comedia">Comédia</option>
@@ -83,17 +86,17 @@ if($_SESSION["privilegio"] == 2 ){
         <textarea id="subject" name="sinopse" placeholder="" style="height:200px"></textarea>
       </div>
     </div>
-    <div class="row" style="position:relative;">
+    <div class="row" style="position:relative">
         <a class='btn btn-primary' href='javascript:;'>
-            Carregar filme
-            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+           CARREGAR FILME
+            <input type="file" style='cursor:pointer;position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
         </a>
         &nbsp;
         <span class='label label-info' id="upload-file-info"></span>
 </div>
     <div class="button" >
-    <button  type="submit" name="retornar" id="Retornar" style ='width:200px'/>Retornar</button>
-    <button  type="submit" name="cadastrar" id="Cadastrar" style ='width:200px'/>Cadastrar</button>
+    <button  type="submit" name="retornar" id="Retornar" style ='width:200px;cursor: pointer'/>RETORNAR</button>
+    <button  type="submit" name="cadastrar" id="Cadastrar" style ='width:200px;cursor: pointer'/>CADASTRAR</button>
     
 
    </div>
