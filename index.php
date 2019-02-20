@@ -141,7 +141,28 @@ if(isset($_SESSION["nome"])  != ""){
 </div>
 
 </div>
+<section class="testando123" style="background-color: #21d192;">
+  <h1 class="text-center">Planos</h1>
+</section>
+<section id="produtos" class="container2  clearfix">
+        <div>
 
+            <h2>Basíco  R$39,99.</h2>
+            <p>tenha acesso a todo nosso conteúdo, e vire um verdadeiro amante das telas.</p>
+        </div>
+
+        <div>
+
+            <h2>Clássico   R$49,99.</h2>
+            <p>Qualidade Sempre! Assita a todo nosso catálogo em HD.</p>
+        </div>
+
+        <div>
+
+            <h2>Premium    R$59,99</h2>
+            <p>Player em Full HD e acesso antecipado a Filmes e séries Lançamento.</p>
+        </div>
+    </section>
 <!-- Optional: some overlay text to describe the video -->
 
   <!-- Footer -->
