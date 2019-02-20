@@ -46,18 +46,18 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
    <?php
     if(isset($_POST["pesquisa"])){
       while($campos = mysqli_fetch_array($query)){
-        echo '<form class="formsearch form-inline justify-content-center container "  style="background-color:white; margin-top:25px;">';
+        echo '<form method="POST"  action="Alterar.php" class="formsearch form-inline justify-content-center container "  style="background-color:white; margin-top:25px; name="form">';
         echo '<div class="form-group ">';
         echo '<input type="text" readonly class="form-control-plaintext" id="staticEmail2" style="width:50%" value=',$campos["id"],' >';
         echo '</div>';
         echo '<div class="form-group ">';
-        echo '<input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=',$campos["nome"],' >';
+        echo '<input type="text" readonly class="form-control-plaintext" name="nome" id="staticEmail2" value=',$campos["nome"],' >';
         echo '</div>';
         echo '<div class="form-group mx-sm-3 ">';
-        echo ' <input type="email" readonly class="form-control-plaintext" id="inputPassword2" value=',$campos["email"],'>';
+        echo ' <input type="email" readonly class="form-control-plaintext" name="email" id="inputPassword2" value=',$campos["email"],'>';
         echo '</div>';
         echo '<div class="form-group mx-sm-3 ">';
-        echo ' <input type="password" readonly class="form-control-plaintext" id="inputPassword2" value=',$campos["pwd"],'>';
+        echo ' <input type="password" readonly class="form-control-plaintext" name="pwd" id="inputPassword2" value=',$campos["pwd"],'>';
         echo '</div>';
         echo '<div class="form-group mx-sm-3 ">';
         if(isset($_POST["pesquisa"])){
@@ -70,13 +70,13 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
             $privilegio = "Administrador";
           }
         }
-        echo '<input type="text" readonly class="form-control-plaintext" id="inputPassword2" style="width:70%" value=',$privilegio,'>';
+        echo '<input type="text" readonly name="privilegio" class="form-control-plaintext" id="inputPassword2" style="width:70%" value=',$privilegio,'>';
         echo '</div>';
-        echo '<button type="submit" class="btn btn-primary " style="margin-bottom:0;">Ver</button>';
+        echo '<button type="submit" class="btn btn-primary" name="alterar" style="margin-bottom:0;">Alterar</button>';
         echo '</form>';
       }
     } 
-    
 ?>
+
   </body>
 </html>
