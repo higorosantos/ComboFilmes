@@ -1,5 +1,7 @@
 <?php
 session_start();
+include "config.php";
+$query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
 ?>
 <html>
 
@@ -18,6 +20,13 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="css/principal.css" rel="stylesheet">
     <script src="js/script.js"></script>
+    <style>
+    .slime img{
+        width: 295px;
+        height: 150px;
+
+    }
+    </style>
 </head>
 
 <body class=>
@@ -104,34 +113,27 @@ session_start();
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
 
-                                    <div class="carousel-item active">
+                                    <div class="slime carousel-item active">
                                         <div class="row">
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie1.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie2.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie3.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie4.png" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
+                                        <?php
+                                         while($campos = mysqli_fetch_array($query)){
+                                            $diretorio = "img/filmes_uploads/";
+                                            $imagem = $diretorio . $campos["url_img"];
+                                            echo '<div class="col-md-3">';
+                                            echo '<a href="#">';
+                                            echo '<img src="',$imagem,'" alt="Image" style="max-width:100%;">';
+                                            echo ' </a>';
+                                            echo '</div>';
+                                         }
+                                        
+                                        
+                                        ?>
                                         </div>
                                         <!--.row-->
                                     </div>
                                     <!--.item-->
 
-                                    <div class="carousel-item">
+                                    <div class="slime carousel-item">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
@@ -174,7 +176,7 @@ session_start();
                 <div class="slide">
                     <div class="row blog">
                         <div class="col-md-12">
-                            <div id="cu2" class="carousel slide" data-ride="carousel">
+                            <div id="cu2" class="slime carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#cu2" data-slide-to="0" class="active"></li>
                                     <li data-target="#cu2" data-slide-to="1"></li>
@@ -184,7 +186,7 @@ session_start();
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
 
-                                    <div class="carousel-item active">
+                                    <div class="slime carousel-item active">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
@@ -211,7 +213,7 @@ session_start();
                                     </div>
                                     <!--.item-->
 
-                                    <div class="carousel-item">
+                                    <div class="slime carousel-item">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
@@ -264,7 +266,7 @@ session_start();
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
 
-                                    <div class="carousel-item active">
+                                    <div class="slime carousel-item active">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
@@ -291,7 +293,7 @@ session_start();
                                     </div>
                                     <!--.item-->
 
-                                    <div class="carousel-item">
+                                    <div class="slime carousel-item">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
