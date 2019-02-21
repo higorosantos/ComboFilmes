@@ -42,8 +42,9 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
                     <p class="dropdown-item"><?php echo $_SESSION["nome"];?></p>
                     <?php if($_SESSION["privilegio"] == 2){
                   echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme</a>';
-                  echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
+                 
                   echo  '<a class="dropdown-item" href="filmes/cadastro_serie.php">Adicionar Serie</a>';
+                  echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
                 }
                 ?>
                     <a class="dropdown-item" href="logout.php">Sair</a>
