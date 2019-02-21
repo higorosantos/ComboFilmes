@@ -8,12 +8,7 @@ body{
     font-family: 'Rubik', sans-serif;
 }
 
-header{
-    width: 100%;
-    height: 10vh;
-    background-image:url('../img/Vingadores - Ultimato  -  Cenas Inéditas.mp4');
-    background-size: cover;
-}
+
 
 
 .container2 {
@@ -23,21 +18,14 @@ header{
     margin: auto;
    
 }
-#testando123{
-    height: 70px;
-    text-align: center;
-}
-#testando123 h1{
-    padding: 25px 0;
-    text-align:center;
 
-}
+
 
 #produtos div{
     width: 33.333%;
     min-width: 320px;
     float: left;
-    padding: 20px;
+
 }
 
 #produtos div h2{
