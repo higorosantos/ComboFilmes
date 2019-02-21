@@ -43,21 +43,47 @@ session_start();
     </header>
     <section class="teste">
 
-        <div id="carouselmain" class="carousel slide" data-ride="carousel">
+        <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/boneca-russa.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/lucifer.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/titans.jpg" alt="Third slide">
-                </div>
-            </div>
+  <!-- Indicators -->
+  
 
-        </div>
+  <!-- The slideshow -->
+  <div class="slideimg carousel-inner">
+    <div class="carousel-item active">
+    <a href="#"><img src="img/boneca-russa.jpg" alt="Boneca Russa"></a>
+      <div class="carousel-caption">
+    <h2>Boneca Russa</h2>
+    <p>Em seu aniversário de 36 anos, Nadia morre. Mas retorna para morrer de novo. E de novo. Presa nesse ciclo surreal, só lhe resta encarar a própria mortalidade.</p>
+  </div>
+    </div>
+    <div class="slideimg carousel-item">
+      <a href="#"><img src="img/lucifer.jpg" alt="Lucifer"></a>
+      <div class="carousel-caption">
+    <h2>Luficer</h2>
+    <p>Lucifer está entediado e infeliz como o Senhor do Inferno e decide tirar férias em Los Angeles, onde vira dono de uma casa noturna com ajuda de sua serva Mazikeen..</p>
+  </div>
+    </div>
+    <div class="slideimg carousel-item">
+    <a href="#"><img src="img/titans.jpg" alt="Titãs"></a>
+      <div class="carousel-caption">
+    <h2>Titãs</h2>
+    <p>Titãs acompanha jovens heróis de todo o Universo DC assim que atingem a maioridade em uma abordagem mais enérgica sobre a clássica franquia dos Jovens Titãs.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+        
 
     </section>
     <div class="masterbox">
@@ -242,22 +268,22 @@ session_start();
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime1.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao1.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime2.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao2.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime3.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao3.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime4.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao4.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                         </div>
@@ -269,22 +295,22 @@ session_start();
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime5.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao5.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime6.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao6.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime7.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao7.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime8.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/acao/acao8.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                         </div>
@@ -305,7 +331,9 @@ session_start();
 
             </div>
             <!--test-->
-            
+            <section class="base" style="background-color: #21d192;">
+                <h1 class="text-center"><a href="#">Kid's</a></h1>
+            </section>
 
 </body>
 

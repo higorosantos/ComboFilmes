@@ -134,39 +134,89 @@ if(isset($_SESSION["nome"])  != ""){
 
 <!-- The video -->
 <div>
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
+<iframe width="100%" height="550" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="content" >
   <h1>Frozen 2</h1>
   <p>Em Breve na Combo Filmes.</p>
 
 </div>
 
 </div>
-<section class="testando123" style="background-color: #21d192;">
+<section class="testando123 " >
+  
   <h1 class="text-center">Planos</h1>
+  <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
+
 </section>
-<section id="produtos" class="container2  clearfix">
+<section id="produtos" class="container2 mt-5 mx-auto  clearfix">
         <div>
 
-            <h2>Basíco  R$39,99.</h2>
-            <p>tenha acesso a todo nosso conteúdo, e vire um verdadeiro amante das telas.</p>
+        <div class="card rounded" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title">Básico</h5>
+    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;" color=#21d192>
+
+    <p class="card-text">R$39,99.</p>
+  </div>
+ 
+    <li class="list px-4">Acesso a todo Catálogo</li>
+
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link"></a>
+    <a href="#" class="card-link"></a>
+  </div>
+</div>
         </div>
 
         <div>
 
-            <h2>Clássico   R$49,99.</h2>
-            <p>Qualidade Sempre! Assita a todo nosso catálogo em HD.</p>
+        <div class="card rounded" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title">Clássico</h5>
+    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;" color=#21d192>
+
+    <p class="card-text">R$49,99.</p>
+  </div>
+  <ul class="">
+    <li class="list px-4">acesso a todo o Catálogo</li>
+    <li class="list px-4">videos e séries em HD</li>
+    <li class="list px-4">assista offline</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link"></a>
+    <a href="#" class="card-link"></a>
+  </div>
+</div>
         </div>
 
         <div>
 
-            <h2>Premium    R$59,99</h2>
-            <p>Player em Full HD e acesso antecipado a Filmes e séries Lançamento.</p>
+        <div class="card rounded" style="width: 18rem;">
+ 
+  <div class="card-body">
+    <h5 class="card-title">Premiun</h5>
+    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;" color=#21d192>
+    <p class="card-text">R$59,99.</p>
+  </div>
+  <ul class="">
+
+    <li class="list px-4">Videos e Séries em Full HD</li>
+    <li class="list px-4">Assista Offline</li>
+    <li class="list px-4">Acesso Antecipado a lançamentos</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link"></a>
+    <a href="#" class="card-link"></a>
+  </div>
+</div>
         </div>
     </section>
 <!-- Optional: some overlay text to describe the video -->
 
   <!-- Footer -->
-<footer class="page-footer font-small  lighten-5">
+<footer class="page-footer font-small mt-5 lighten-5">
 
   <div style="background-color: #21d192;">
     <div class="container">
