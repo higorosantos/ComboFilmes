@@ -1,8 +1,8 @@
 <?php
 session_start();
 ?>
-<html>
 
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,11 +16,11 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="css/principal.css" rel="stylesheet">
+    <link href="css/kid.css" rel="stylesheet">
     <script src="js/script.js"></script>
 </head>
 
-<body class=>
+<body>
     <header>
         <div>
             <img src="img/logo.png" alt="logomarca" id="logo" style="z-index:1;">
@@ -332,7 +332,7 @@ session_start();
             </div>
             <!--test-->
             <section class="base" style="background-color: #21d192;">
-                <h1 class="text-center"><a href="kid.php">Kid's</a></h1>
+                <h1 class="text-center"><a href="#">Kid's</a></h1>
             </section>
 
 </body>
