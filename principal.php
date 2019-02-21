@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <head>
@@ -27,8 +30,12 @@
                     <img src="img/kk.jpg" alt="Foto de Perfil">
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="cadastro.php">Adicionar Filme/Serie</a>
-                    <a class="dropdown-item" href="#">Alterar</a>
+                    <p class="dropdown-item"><?php echo $_SESSION["nome"];?></p>
+                    <?php if($_SESSION["privilegio"] == 2){
+                  echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme/Serie</a>';
+                  echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
+                }
+                ?>
                     <a class="dropdown-item" href="logout.php">Sair</a>
                 </div>
             </div>

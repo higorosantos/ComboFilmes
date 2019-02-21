@@ -25,7 +25,7 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Awesome Search Box</title>
+    <title>Combo Filmes- Gerenciar Usuarios</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/searchbar.css">
@@ -46,10 +46,7 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
    <?php
     if(isset($_POST["pesquisa"])){
       while($campos = mysqli_fetch_array($query)){
-        echo '<form method="POST"  action="Alterar.php" class="formsearch form-inline justify-content-center container "  style="background-color:white; margin-top:25px; name="form">';
-        echo '<div class="form-group ">';
-        echo '<input type="text" readonly class="form-control-plaintext" id="staticEmail2" style="width:50%" value=',$campos["id"],' >';
-        echo '</div>';
+        echo '<form method="POST"  action="gerenciar.php"  class="formsearch form-inline justify-content-center container "  style="background-color:white; margin-top:25px; id="formulario">';
         echo '<div class="form-group ">';
         echo '<input type="text" readonly class="form-control-plaintext" name="nome" id="staticEmail2" value=',$campos["nome"],' >';
         echo '</div>';
@@ -72,11 +69,14 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
         }
         echo '<input type="text" readonly name="privilegio" class="form-control-plaintext" id="inputPassword2" style="width:70%" value=',$privilegio,'>';
         echo '</div>';
-        echo '<button type="submit" class="btn btn-primary" name="alterar" style="margin-bottom:0;">Alterar</button>';
+        echo '<button type="submit" class="btn btn-primary"    style="margin-bottom:0;">Gerenciar</button>';
         echo '</form>';
       }
     } 
+
+  
 ?>
+<!-- Script que Muda o Action -->
 
   </body>
 </html>

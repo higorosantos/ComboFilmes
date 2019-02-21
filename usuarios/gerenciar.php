@@ -9,7 +9,7 @@ if($_SESSION["privilegio"] == 2 ){
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Combo Filmes</title>
+  <title>Combo Filmes - Gerenciar Usuarios</title>
   <!--font-->
 
 
@@ -35,7 +35,7 @@ if($_SESSION["privilegio"] == 2 ){
 
 <body>
 <section class="">
-<form class="form1 container" method="POST" action="#" style="width:40%; margin-top:100px;">
+<form class="form1 container" method="POST" action="" style="width:40%; margin-top:100px;">
 <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
     <div class>
@@ -57,16 +57,17 @@ if($_SESSION["privilegio"] == 2 ){
   <div class="form-group">
     <label for="inputPassword3" class="col-form-label">Privilegio</label>
     <div class="">
-    <select class="custom-select" name="previlegio">
-  <option value="1" <?php echo $_POST["privilegio"]=='Usuario'?'selected':'';?>>Usuário</option>
-  <option value="2" <?php echo $_POST["privilegio"]=='Administrador'?'selected':'';?>>Administrador</option>
+<select class="custom-select" name="privilegio" >
+  <option value="1">Usuário</option>
+  <option value="2">Administrador</option>
   
 </select>
     </div>
     <div class="form-group">
     <div class="btn">
       <button type="submit" name="alterar" class="btn btn-primary">Confirma</button>
-      <button type="submit" class="btn btn-primary">Cancelar</button>
+      <button type="submit" name="excluir" class="btn btn-primary">Excluir</button>
+      <button type="submit" name="cancelar" class="btn btn-primary">Cancelar</button>
     </div>
   </div>
   </div>
@@ -82,9 +83,19 @@ $resultado = NULL;
 $email = $_POST["email"];
 $senha = $_POST["pwd"];
 $privilegio = $_POST["privilegio"];
+if(isset($_POST["cancelar"])){
+  echo "<script>window.location='index.php';</script>";
+
+}
 if(isset($_POST["alterar"])){
   $query = mysqli_query($conect,"UPDATE usuario SET email='$email',pwd='$senha',privilegio='$privilegio' WHERE email = '$email'")or die(mysqli_error());
+  echo "<script>alert('Cadastro Alterado com sucesso!')</script>";
+}
 
+if(isset($_POST["excluir"])){
+  $query = mysqli_query($conect,"DELETE FROM usuario WHERE email='$email'")or die(mysqli_error());
+  echo "<script>alert('Usuario deletado!!')</script>";
+  echo "<script>window.location='index.php';</script>";
 }
 ?>
 </body>

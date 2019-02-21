@@ -5,8 +5,9 @@ if($_SESSION["privilegio"] == 2 ){
 ?>
 <html>
 
+
 <head>
-    <title>Combo Filmes</title>
+    <title>Combo Filmes - Adcionar Filmes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -31,7 +32,7 @@ if($_SESSION["privilegio"] == 2 ){
 <body class="dody" >
     <div class="form-group">
     <div class="container">
-  <form action="action_page.php">
+  <form method="POST" action="../acao/cadastrando_filmes.php" enctype="multipart/form-data">
     <div class="row">
       <div class="col-25">
         <label for="fname">Titulo do filme</label>
@@ -50,15 +51,23 @@ if($_SESSION["privilegio"] == 2 ){
     </div>
     <div class="row">
       <div class="col-25">
+        <label for="fname">Duração</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="Duracao" placeholder="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
         <label for="Censura">Censura</label>
       </div>
       <div class="col-75">
         <select id="Censura" name="Censura" style="cursor: pointer">
-        <option value="Livre">Livre</option>
+        <option value="0">Livre</option>
           <option value="10">10</option>
           <option value="14">14</option>
           <option value="16">16</option>
-          <option value="+18">+18</option>
+          <option value="18">+18</option>
         </select>
       </div>
     </div>
@@ -74,7 +83,7 @@ if($_SESSION["privilegio"] == 2 ){
           <option value="comedia">Comédia</option>
           <option value="terror">Terror</option>
           <option value="adulto">Adulto</option>
-          <option value="animação">Animação</option>
+          <option value="animacao">Animação</option>
         </select>
       </div>
     </div>
@@ -89,13 +98,13 @@ if($_SESSION["privilegio"] == 2 ){
     <div class="row" style="position:relative">
         <a class='btn btn-primary' href='javascript:;'>
            CARREGAR FILME
-            <input type="file" style='cursor:pointer;position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+            <input type="file" name="imagem" style='cursor:pointer;position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
         </a>
         &nbsp;
         <span class='label label-info' id="upload-file-info"></span>
 </div>
     <div class="button" >
-    <button  type="submit" name="retornar" id="Retornar" style ='width:200px;cursor: pointer'/>RETORNAR</button>
+    <a href="../principal.php" ><button  type="button" name="retornar" id="Retornar" style ='width:200px;cursor: pointer'/>RETORNAR</button></a>
     <button  type="submit" name="cadastrar" id="Cadastrar" style ='width:200px;cursor: pointer'/>CADASTRAR</button>
     
 
