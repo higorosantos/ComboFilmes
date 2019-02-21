@@ -65,7 +65,7 @@ if($_SESSION["privilegio"] == 2 ){
     </div>
     <div class="form-group">
     <div class="btn">
-      <button type="submit" name="alterar" class="btn btn-primary">Confirma</button>
+      <button type="submit" name="alterar" class="btn btn-primary">Alterar</button>
       <button type="submit" name="excluir" class="btn btn-primary">Excluir</button>
       <button type="submit" name="cancelar" class="btn btn-primary">Cancelar</button>
     </div>
