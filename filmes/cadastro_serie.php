@@ -32,7 +32,7 @@ if($_SESSION["privilegio"] == 2 ){
 <body class="dody" >
     <div class="form-group">
     <div class="container">
-  <form method="POST" action="../acao/cadastrando_filmes.php" enctype="multipart/form-data">
+  <form method="POST" action="../acao/cadastrando_serie.php" enctype="multipart/form-data">
     <div class="row">
       <div class="col-25">
         <label for="sname">Titulo da Serie</label>
@@ -54,7 +54,7 @@ if($_SESSION["privilegio"] == 2 ){
         <label for="Censura">Temporads</label>
       </div>
       <div class="col-75">
-        <select id="Censura" name="temp" style="cursor: pointer">
+        <select id="Censura" name="temporada" style="cursor: pointer">
         <option value="0">1</option>
           <option value="10">2</option>
           <option value="14">3</option>
