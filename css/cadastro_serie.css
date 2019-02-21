@@ -1,0 +1,116 @@
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  
+  .container {
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+    padding: 20px;
+  }
+  
+ 
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  body{
+      padding: 100px;
+      background-color: black
+  }
+  button{
+    
+      
+      margin:10px;
+      float: right ;
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #050505;
+        padding: 10px 20px;
+        background: -moz-linear-gradient(
+          top,
+          #ffffff 0%,
+          #ebebeb 50%,
+          #dbdbdb 50%,
+          #b5b5b5);
+        background: -webkit-gradient(
+          linear, left top, left bottom,
+          from(rgb(135, 255, 135)),
+          color-stop(0.50, rgb(101, 255, 101)),
+          color-stop(0.50, rgb(46, 255, 46)),
+          to(rgb(0, 255, 0)));
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #949494;
+        -moz-box-shadow:
+          0px 1px 3px rgba(000,000,000,0.5),
+          inset 0px 0px 2px rgba(255,255,255,1);
+        -webkit-box-shadow:
+          0px 1px 3px rgba(000,000,000,0.5),
+          inset 0px 0px 2px rgba(255,255,255,1);
+        box-shadow:
+          0px 1px 3px rgba(000,000,000,0.5),
+          inset 0px 0px 2px rgba(255,255,255,1);
+        text-shadow:
+          0px -1px 0px rgba(000,000,000,0.2),
+          0px 1px 0px rgba(255,255,255,1);
+      
+      
+    
+  }
+  
+  carregar{
+      padding: 10px;
+  }
+
+  
+ 
+ 
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+ 
