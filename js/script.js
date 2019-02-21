@@ -8,7 +8,7 @@ $(document).ready(function () {
 /**/
 
 /*Navbar scroll mudar cor */
-$(document).on('scroll', _.debounce(function() {
+$(document).on('scroll',_.debounce(function() {
 $(window).on("scroll", function () {
     if ($(window).scrollTop()) {
         $('nav').addClass('black');
