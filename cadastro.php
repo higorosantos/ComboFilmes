@@ -35,7 +35,7 @@
           <i class="fa fa-bars fa-2x"></i>
         </div>
         <div class="logo img-responsive" >
-            <img src="img/Cool Text - COMBO FILMES 314260938724625.png" alt="logomarca">
+            <img src="img/logo.png" alt="logomarca">
         </div>
          <div >
           <ul>
