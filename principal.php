@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "config.php";
+if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
 $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
 ?>
 <html>
@@ -341,3 +342,10 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
 </body>
 
 </html>
+<?php
+}
+else{
+    echo "<script>window.location='index.php';</script>";
+}
+
+?>
