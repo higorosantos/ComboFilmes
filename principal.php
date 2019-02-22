@@ -46,9 +46,10 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
                  
                   echo  '<a class="dropdown-item" href="filmes/cadastro_serie.php">Adicionar Serie</a>';
                   echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
+                  echo ' <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>';
                 }
                 ?>
-                    <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>
+                   
                     <a class="dropdown-item" href="logout.php">Sair</a>
                     
                 </div>
