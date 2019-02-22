@@ -68,21 +68,21 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
   <div class="slideimg carousel-inner">
     <div class="carousel-item active">
     <a href="#"><img src="img/boneca-russa.jpg" alt="Boneca Russa"></a>
-      <div class="carousel-caption">
+      <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
     <h2>Boneca Russa</h2>
     <p>Em seu aniversário de 36 anos, Nadia morre. Mas retorna para morrer de novo. E de novo. Presa nesse ciclo surreal, só lhe resta encarar a própria mortalidade.</p>
   </div>
     </div>
     <div class="slideimg carousel-item">
       <a href="#"><img src="img/lucifer.jpg" alt="Lucifer"></a>
-      <div class="carousel-caption">
+      <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
     <h2>Luficer</h2>
     <p>Lucifer está entediado e infeliz como o Senhor do Inferno e decide tirar férias em Los Angeles, onde vira dono de uma casa noturna com ajuda de sua serva Mazikeen..</p>
   </div>
     </div>
     <div class="slideimg carousel-item">
     <a href="#"><img src="img/titans.jpg" alt="Titãs"></a>
-      <div class="carousel-caption">
+      <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
     <h2>Titãs</h2>
     <p>Titãs acompanha jovens heróis de todo o Universo DC assim que atingem a maioridade em uma abordagem mais enérgica sobre a clássica franquia dos Jovens Titãs.</p>
   </div>

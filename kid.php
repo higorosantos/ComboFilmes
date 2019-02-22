@@ -1,8 +1,12 @@
 <?php
 session_start();
+include "config.php";
+if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
+    $query = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=1 and id_filme<=7")or die(myqli_erro());
+    $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=12")or die(myqli_erro());
 ?>
-
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,12 +22,19 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="css/kid.css" rel="stylesheet">
     <script src="js/script.js"></script>
+    <style>
+    .slime img{
+        width: 295px;
+        height: 150px;
+
+    }
+    </style>
 </head>
 
-<body>
+<body class=>
     <header>
         <div>
-            <img src="img/logo.png" alt="logomarca" id="logo" style="z-index:1;">
+            <img src="img/kids/logokids.png" alt="logomarca" id="logo" style="z-index:1;">
 
             <div class="perfil btn-group dropleft">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,11 +43,16 @@ session_start();
                 <div class="dropdown-menu">
                     <p class="dropdown-item"><?php echo $_SESSION["nome"];?></p>
                     <?php if($_SESSION["privilegio"] == 2){
-                  echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme/Serie</a>';
+                  echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme</a>';
+                 
+                  echo  '<a class="dropdown-item" href="filmes/cadastro_serie.php">Adicionar Serie</a>';
                   echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
+                  echo ' <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>';
                 }
                 ?>
+                   
                     <a class="dropdown-item" href="logout.php">Sair</a>
+                    
                 </div>
             </div>
         </div>
@@ -51,24 +67,24 @@ session_start();
   <!-- The slideshow -->
   <div class="slideimg carousel-inner">
     <div class="carousel-item active">
-    <a href="#"><img src="img/boneca-russa.jpg" alt="Boneca Russa"></a>
+    <a href="#"><img src="img/kids/alta3.jpg" alt="Galinha pintadinha"></a>
       <div class="carousel-caption">
-    <h2>Boneca Russa</h2>
-    <p>Em seu aniversário de 36 anos, Nadia morre. Mas retorna para morrer de novo. E de novo. Presa nesse ciclo surreal, só lhe resta encarar a própria mortalidade.</p>
+    <h2>Galinha pintadinha</h2>
+    <p>A Galinha Pitandinha está pronta para viver novas aventuras ao lado do marido, o Galo Carijó, e do filho, o simpático Pintinho Amarelinho. É claro que também embarcam nessa divertida jornada a Popó, a Borboletinha e também a Baratinha, que não se desgrudam da família.</p>
   </div>
     </div>
     <div class="slideimg carousel-item">
-      <a href="#"><img src="img/lucifer.jpg" alt="Lucifer"></a>
+      <a href="#"><img src="img/kids/alta1.jpg" alt="Mundo Bita"></a>
       <div class="carousel-caption">
-    <h2>Luficer</h2>
-    <p>Lucifer está entediado e infeliz como o Senhor do Inferno e decide tirar férias em Los Angeles, onde vira dono de uma casa noturna com ajuda de sua serva Mazikeen..</p>
+    <h2>Mundo Bita</h2>
+    <p>Desenho musical brasileiro que faz sucesso no mundo inteiro, o Mundo Bita é uma ótima escolha para os pequenos aprenderem cantando sobre todo o tipo de assunto.</p>
   </div>
     </div>
     <div class="slideimg carousel-item">
-    <a href="#"><img src="img/titans.jpg" alt="Titãs"></a>
+    <a href="#"><img src="img/kids/hello.jpg" alt="Hello Kitty"></a>
       <div class="carousel-caption">
-    <h2>Titãs</h2>
-    <p>Titãs acompanha jovens heróis de todo o Universo DC assim que atingem a maioridade em uma abordagem mais enérgica sobre a clássica franquia dos Jovens Titãs.</p>
+    <h2>Hello Kitty</h2>
+    <p>Personagem amado no mundo inteiro cujo desenho é uma aula de protagonismo; Hello Kitty experimenta fazer de tudo um pouco, perseguindo seus interesses e desenvolvendo seus gostos.</p>
   </div>
     </div>
   </div>
@@ -104,77 +120,77 @@ session_start();
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
 
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie1.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie2.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie3.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie4.png" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--.row-->
-                                    </div>
-                                    <!--.item-->
+<div class="slime carousel-item active">
+    <div class="row">
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta1.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta2.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta3.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta4.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+    </div>
+    <!--.row-->
+</div>
+<!--.item-->
 
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie5.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie6.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie7.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie8.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!--.row-->
-                                    </div>
-                                    <!--.item-->
+<div class="slime carousel-item">
+    <div class="row">
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta5.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta6.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta7.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <img src="img/kids/alta8.jpg" alt="Image" style="max-width:100%;">
+            </a>
+        </div>
+    </div>
+    <!--.row-->
+</div>
+<!--.item-->
 
-                                </div>
-                                <!--.carousel-inner-->
-                            </div>
-                            <!--.Carousel-->
+</div>
+<!--.carousel-inner-->
+</div>
+<!--.Carousel-->
 
-                        </div>
-                    </div>
-                </div>
-            </section>
+</div>
+</div>
+
+</section>
             <div class="divtext">
-                <h1>Animes</h1>
+                <h1>Filmes de Animação</h1>
             </div>
             <section>
                 <div class="slide">
                     <div class="row blog">
                         <div class="col-md-12">
-                            <div id="cu2" class="carousel slide" data-ride="carousel">
+                            <div id="cu2" class="slime carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#cu2" data-slide-to="0" class="active"></li>
                                     <li data-target="#cu2" data-slide-to="1"></li>
@@ -184,26 +200,26 @@ session_start();
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
 
-                                    <div class="carousel-item active">
+                                    <div class="slime carousel-item active">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime1.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima1.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime2.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima2.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime3.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima3.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime4.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima4.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                         </div>
@@ -211,26 +227,26 @@ session_start();
                                     </div>
                                     <!--.item-->
 
-                                    <div class="carousel-item">
+                                    <div class="slime carousel-item">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime5.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima5.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime6.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima6.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime7.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima7.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/anime/anime8.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/anima8.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                         </div>
@@ -248,7 +264,7 @@ session_start();
 
             </section>
             <div class="divtext">
-                <h1>Ação</h1>
+                <h1>Relembre com seus Filhos!</h1>
             </div>
             <section>
                 <div class="slide">
@@ -264,26 +280,26 @@ session_start();
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
 
-                                    <div class="carousel-item active">
+                                    <div class="slime carousel-item active">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao1.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra1.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao2.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra2.png" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao3.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra3.png" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao4.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra4.png" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                         </div>
@@ -291,26 +307,26 @@ session_start();
                                     </div>
                                     <!--.item-->
 
-                                    <div class="carousel-item">
+                                    <div class="slime carousel-item">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao5.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra5.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao6.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra6.png" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao7.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra7.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
                                                 <a href="#">
-                                                    <img src="img/acao/acao8.jpg" alt="Image" style="max-width:100%;">
+                                                    <img src="img/kids/lembra8.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                         </div>
@@ -331,10 +347,17 @@ session_start();
 
             </div>
             <!--test-->
-            <section class="base" style="background-color: #21d192;">
-                <h1 class="text-center"><a href="#">Kid's</a></h1>
+            <section class="base">
+                <h1 class="text-center"><a href="principal.php">Encerrar Kids</a></h1>
             </section>
 
 </body>
 
 </html>
+<?php
+}
+else{
+    echo "<script>window.location='index.php';</script>";
+}
+
+?>
