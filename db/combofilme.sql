@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Fev-2019 às 00:39
+-- Generation Time: 22-Fev-2019 às 01:11
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -56,7 +56,13 @@ CREATE TABLE `filme` (
 --
 
 INSERT INTO `filme` (`id_filme`, `titulo`, `genero`, `duracao`, `pais_origem`, `censura`, `url_img`, `sinopse`) VALUES
-(1, 'Meu malvado favorito', 'Comédia', 120, 'USA', 0, 'https://www.youtube.com/watch?v=lkDyX8C5N-4', 'Gru é mau...');
+(2, 'Animais Fantásticos: Os Crimes', 'aventura', 134, 'EUA', 10, 'CinePOP-Animais-Fantásticos.jpg', 'Newt Scamander reencontra os queridos amigos Tina Goldstein, Queenie Goldstein e Jacob Kowalski. Ele é recrutado pelo seu antigo professor em Hogwarts, Alvo Dumbledore, para enfrentar o terrível bruxo das trevas Gellert Grindelwald, que escapou da custódia da Macusa (Congresso Mágico dos EUA) e reúne seguidores, dividindo o mundo entre seres de magos sangue puro e seres não-mágicos.'),
+(3, 'Aquaman', 'aventura', 143, 'EUA', 14, 'CinePOP-Aquaman.jpg', 'Metade humano e semi atlante, Arthur Curry (Jason Momoa) parte em uma jornada junto de seus aliados Mera (Amber Heard) e Vulko (Willem Dafoe) para encontrar o tridente do rei, uma arma mítica capaz de controlar os sete mares. O trio precisa cumprir seu objetivo antes de Orm (Patrick Wilson), meio-irmão de Arthur que pretende derrubá-lo e tomar o trono de Atlântida.'),
+(6, 'Vikings', 'acao', 18, 'EUA', 16, 'serie1.jpg', 'A série é inspirada nas histórias de invasões, comércio e exploração dos Nórdicos da Escandinávia medieval. A série segue as explorações do lendário líder Viking Ragnar Lothbrok e sua tripulação e família, como notavelmente foi estabelecido nas sagas Ragnars saga Loðbrókar e Ragnarssona þáttr do século XIII, assim como na obra do Saxão Gramático do século XII, Gesta Danorum. As sagas lendárias nórdicas eram parcialmente contos de ficção baseados na tradição oral nórdica, escritas cerca de 200 à 400 anos após os eventos que descrevem. Mais inspirações são tiradas de fontes históricas da época, como os registros do ataque Viking em Lindisfarne, retratado no segundo episódio, ou a conta de Amade ibne Fadalane sobre os Vikings Volga, do século X. A série se passa no início da era viking, marcada pelo ataque de Lindisfarne, em 793.'),
+(7, 'The Flash', 'aventura', 14, 'EUA', 0, 'serie2.jpg', 'Após testemunhar o estranho assassinato de sua mãe e a injusta acusação de seu pai pelo crime, Barry Allen fica sob os cuidados do detetive Joe West e sua filha Iris West. Barry se torna brilhante, mas socialmente, um cientista forense desconhecido trabalhando para o Departamento de Polícia de Central City. Sua obsessão por seu trágico passado faz com que ele fique separado das demais pessoas ao seu redor; ele investiga casos frios, ocorrências paranormais, e vazamentos de ponta de avanços científicos que podem dar uma luz no caso do assassinato de sua mãe. Ninguém acredita em sua descrição do crime — que uma bola de raio com o rosto de um homem invadiu sua casa naquela noite e matou sua mãe — e Barry é forçado a procurar por si mesmo pistas que limpem o nome de seu pai. Quatorze anos depois da morte de sua mãe, uma explosão de um avançado Acelerador de Partículas, durante sua apresentação ao público, banha a cidade com uma forma de radiação previamente desconhecida durante uma tempest'),
+(11, 'Sex Education', 'comedia', 0, 'EUA', 16, 'serie5.jpg', 'dsdsdds'),
+(12, 'kingsman', 'aventura', 134, 'EUA', 0, 'Kingsman-3.jpg', 'tydydfyfytfytfytfyt'),
+(14, 'Game of Thrones', 'aventura', 0, 'EUA', 16, 'serie3.jpg', '....');
 
 -- --------------------------------------------------------
 
@@ -107,13 +113,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `filme`
 --
 ALTER TABLE `filme`
-  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
