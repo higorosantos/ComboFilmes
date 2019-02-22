@@ -2,7 +2,8 @@
 session_start();
 include "config.php";
 if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
-$query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
+    $query = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=1 and id_filme<=7")or die(myqli_erro());
+    $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=12")or die(myqli_erro());
 ?>
 <html>
 
