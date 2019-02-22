@@ -43,11 +43,14 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
                     <p class="dropdown-item"><?php echo $_SESSION["nome"];?></p>
                     <?php if($_SESSION["privilegio"] == 2){
                   echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme</a>';
-                  echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
+                 
                   echo  '<a class="dropdown-item" href="filmes/cadastro_serie.php">Adicionar Serie</a>';
+                  echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
                 }
                 ?>
+                    <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>
                     <a class="dropdown-item" href="logout.php">Sair</a>
+                    
                 </div>
             </div>
         </div>
@@ -118,6 +121,8 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
                                     <div class="slime carousel-item active">
                                         <div class="row">
                                         <?php
+                                        $lista  = mysqli_num_rows($query);
+                                       
                                          while($campos = mysqli_fetch_array($query)){
                                             $diretorio = "img/filmes_uploads/";
                                             $imagem = $diretorio . $campos["url_img"];
@@ -126,7 +131,10 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
                                             echo '<img src="',$imagem,'" alt="Image" style="max-width:100%;">';
                                             echo ' </a>';
                                             echo '</div>';
-                                         }
+                            
+                                            
+                                        
+                                        }
                                         
                                         
                                         ?>
@@ -137,26 +145,25 @@ $query = mysqli_query($conect,"SELECT * FROM filme ")or die(myqli_erro());
 
                                     <div class="slime carousel-item">
                                         <div class="row">
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie5.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie6.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie7.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#">
-                                                    <img src="img/top/serie8.jpg" alt="Image" style="max-width:100%;">
-                                                </a>
-                                            </div>
+                                        <?php
+                                       
+                                            while($campos = mysqli_fetch_array($query2)){
+                                                $diretorio = "img/filmes_uploads/";
+                                                $imagem = $diretorio . $campos["url_img"];
+                                                echo '<div class="col-md-3">';
+                                                echo '<a href="#">';
+                                                echo '<img src="',$imagem,'" alt="Image" style="max-width:100%;">';
+                                                echo ' </a>';
+                                                echo '</div>';
+                                
+                                                
+                                             }
+                                            
+
+                                        
+
+                                        ?>
+                                         
                                         </div>
                                         <!--.row-->
                                     </div>
