@@ -47,9 +47,10 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                  
                   echo  '<a class="dropdown-item" href="filmes/cadastro_serie.php">Adicionar Serie</a>';
                   echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
+                  echo ' <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>';
                 }
                 ?>
-                    <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>
+                   
                     <a class="dropdown-item" href="logout.php">Sair</a>
                     
                 </div>
