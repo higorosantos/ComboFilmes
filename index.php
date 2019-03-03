@@ -156,7 +156,7 @@ if(isset($_SESSION["nome"])  != ""){
     <h5 class="card-title">Básico</h5>
     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;" color=#21d192>
 
-    <p class="card-text">R$39,99.</p>
+    <p class="card-text">R$19,99.</p>
   </div>
  
     <li class="list px-4">Acesso a todo Catálogo</li>
@@ -177,11 +177,11 @@ if(isset($_SESSION["nome"])  != ""){
     <h5 class="card-title">Clássico</h5>
     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;" color=#21d192>
 
-    <p class="card-text">R$49,99.</p>
+    <p class="card-text">R$29,99.</p>
   </div>
   <ul class="">
     <li class="list px-4">acesso a todo o Catálogo</li>
-    <li class="list px-4">videos e séries em HD</li>
+    <li class="list px-4">acesso a Twitch tv</li>
     <li class="list px-4">assista offline</li>
   </ul>
   <div class="card-body">
@@ -198,11 +198,11 @@ if(isset($_SESSION["nome"])  != ""){
   <div class="card-body">
     <h5 class="card-title">Premiun</h5>
     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 220px;" color=#21d192>
-    <p class="card-text">R$59,99.</p>
+    <p class="card-text">R$45,99.</p>
   </div>
   <ul class="">
-
-    <li class="list px-4">Videos e Séries em Full HD</li>
+    <li class="list px-4">Assita Ao vivo eventos grandiosos "Rock in Rio, Lollapalooza, Tomorrowland..."</li>
+    <li class="list px-4">Videos e Séries em Full HD e Twitch.  </li>
     <li class="list px-4">Assista Offline</li>
     <li class="list px-4">Acesso Antecipado a lançamentos</li>
   </ul>

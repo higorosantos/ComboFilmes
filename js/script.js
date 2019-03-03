@@ -22,4 +22,3 @@ console.log("TomA")
 }, 300));
 
 
-/*carrosel*/

@@ -15,29 +15,37 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
 
     <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  
+
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="css/principal.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <script src="js/scriptprincipal.js"></script>
     <style>
-    .slime img{
-        width: 295px;
-        height: 150px;
+        .slime img {
+            width: 295px;
+            height: 150px;
 
-    }
+        }
     </style>
 </head>
 
-<body class=>
+<body class="container">
     <header>
         <div>
             <img src="img/logo.png" alt="logomarca" id="logo" style="z-index:1;">
 
             <div class="perfil btn-group dropleft">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     <img src="img/kk.jpg" alt="Foto de Perfil">
                 </button>
                 <div class="dropdown-menu">
@@ -50,9 +58,9 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                   echo ' <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>';
                 }
                 ?>
-                   
+
                     <a class="dropdown-item" href="logout.php">Sair</a>
-                    
+
                 </div>
             </div>
         </div>
@@ -61,50 +69,54 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
         <div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  
+            <!-- Indicators -->
 
-  <!-- The slideshow -->
-  <div class="slideimg carousel-inner">
-    <div class="carousel-item active">
-    <a href="#"><img src="img/boneca-russa.jpg" alt="Boneca Russa"></a>
-      <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
-    <h2>Boneca Russa</h2>
-    <p>Em seu aniversário de 36 anos, Nadia morre. Mas retorna para morrer de novo. E de novo. Presa nesse ciclo surreal, só lhe resta encarar a própria mortalidade.</p>
-  </div>
-    </div>
-    <div class="slideimg carousel-item">
-      <a href="#"><img src="img/lucifer.jpg" alt="Lucifer"></a>
-      <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
-    <h2>Luficer</h2>
-    <p>Lucifer está entediado e infeliz como o Senhor do Inferno e decide tirar férias em Los Angeles, onde vira dono de uma casa noturna com ajuda de sua serva Mazikeen..</p>
-  </div>
-    </div>
-    <div class="slideimg carousel-item">
-    <a href="#"><img src="img/titans.jpg" alt="Titãs"></a>
-      <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
-    <h2>Titãs</h2>
-    <p>Titãs acompanha jovens heróis de todo o Universo DC assim que atingem a maioridade em uma abordagem mais enérgica sobre a clássica franquia dos Jovens Titãs.</p>
-  </div>
-    </div>
-  </div>
 
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+            <!-- The slideshow -->
+            <div class="slideimg carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#"><img src="img/boneca-russa.jpg" alt="Boneca Russa"></a>
+                    <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
+                        <h2>Boneca Russa</h2>
+                        <p>Em seu aniversário de 36 anos, Nadia morre. Mas retorna para morrer de novo. E de novo. Presa
+                            nesse ciclo surreal, só lhe resta encarar a própria mortalidade.</p>
+                    </div>
+                </div>
+                <div class="slideimg carousel-item">
+                    <a href="#"><img src="img/lucifer.jpg" alt="Lucifer"></a>
+                    <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
+                        <h2>Luficer</h2>
+                        <p>Lucifer está entediado e infeliz como o Senhor do Inferno e decide tirar férias em Los
+                            Angeles, onde vira dono de uma casa noturna com ajuda de sua serva Mazikeen..</p>
+                    </div>
+                </div>
+                <div class="slideimg carousel-item">
+                    <a href="#"><img src="img/titans.jpg" alt="Titãs"></a>
+                    <div class="carousel-caption" style="background-color: rgba(0,0,0,0.6);">
+                        <h2>Titãs</h2>
+                        <p>Titãs acompanha jovens heróis de todo o Universo DC assim que atingem a maioridade em uma
+                            abordagem mais enérgica sobre a clássica franquia dos Jovens Titãs.</p>
+                    </div>
+                </div>
+            </div>
 
-</div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
 
-        
+        </div>
+
+
 
     </section>
     <div class="masterbox">
         <div class="divtext">
             <h1>Em Alta !</h1>
+            <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
 
             <section>
                 <div class="slide">
@@ -122,7 +134,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
                                     <div class="slime carousel-item active">
                                         <div class="row">
-                                        <?php
+                                            <?php
                                         $lista  = mysqli_num_rows($query);
                                        
                                          while($campos = mysqli_fetch_array($query)){
@@ -147,7 +159,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
                                     <div class="slime carousel-item">
                                         <div class="row">
-                                        <?php
+                                            <?php
                                        
                                             while($campos = mysqli_fetch_array($query2)){
                                                 $diretorio = "img/filmes_uploads/";
@@ -165,7 +177,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                         
 
                                         ?>
-                                         
+
                                         </div>
                                         <!--.row-->
                                     </div>
@@ -182,6 +194,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
             </section>
             <div class="divtext">
                 <h1>Animes</h1>
+                <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
             </div>
             <section>
                 <div class="slide">
@@ -200,22 +213,70 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                     <div class="slime carousel-item active">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime1.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime2.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime3.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime4.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
@@ -227,22 +288,70 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                     <div class="slime carousel-item">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime5.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime6.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime7.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="<button type=" button" class="btn btn-primary"
+                                                    data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                                                    modal</button>
+
+                                                    <div class="modal fade bd-example-modal-lg" tabindex="-1"
+                                                        role="dialog" aria-labelledby="myLargeModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
+                                                                ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <img src="img/anime/anime8.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
@@ -262,6 +371,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
             </section>
             <div class="divtext">
                 <h1>Ação</h1>
+                <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
             </div>
             <section>
                 <div class="slide">
@@ -280,7 +390,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                     <div class="slime carousel-item active">
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="#">
+                                                <a href="">
                                                     <img src="img/acao/acao1.jpg" alt="Image" style="max-width:100%;">
                                                 </a>
                                             </div>
@@ -340,13 +450,29 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                     </div>
 
             </section>
-            </div>
+        </div>
 
+    </div>
+    <!--test-->
+
+    <section>
+    <div class="divtext">
+    <a href="#"><i class="fab fa-twitch fa-4x" style="color:#fff;">Twitch</i></a>
+                <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#4B367C>
+            <div>
+            <div>
+  <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1987%;">
+    <iframe 
+    src="http://player.twitch.tv/?channel=skipnho&autoplay=false" 
+    style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+    allowfullscreen 
+    scrolling="no"
+    >
+    </iframe>
+  </div>
+</div>
             </div>
-            <!--test-->
-            <section class="base" style="background-color: #21d192;">
-                <h1 class="text-center"><a href="kid.php">Kid's</a></h1>
-            </section>
+    </section>
 
 </body>
 
