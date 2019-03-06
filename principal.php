@@ -3,7 +3,7 @@ session_start();
 include "config.php";
 if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
     $query = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=1 and id_filme<=7")or die(myqli_erro());
-    $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=12")or die(myqli_erro());
+    $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=16")or die(myqli_erro());
 ?>
 <html>
 
@@ -42,7 +42,11 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
     <header>
         <div>
             <img src="img/logo.png" alt="logomarca" id="logo" style="z-index:1;">
-
+            <div style=" margin-top:5px; float:right;">
+            <img src="img/not.png" style="width:40px;">
+            <span class="badge badge-light">0</span>
+            </div>
+            <span class="counter">22</span>
             <div class="perfil btn-group dropleft">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -51,9 +55,9 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                 <div class="dropdown-menu">
                     <p class="dropdown-item"><?php echo $_SESSION["nome"];?></p>
                     <?php if($_SESSION["privilegio"] == 2){
-                  echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme</a>';
+                  echo  '<a class="dropdown-item" href="filmes/cadastro_filme.php">Adicionar Filme/Serie</a>';
                  
-                  echo  '<a class="dropdown-item" href="filmes/cadastro_serie.php">Adicionar Serie</a>';
+            
                   echo  '<a class="dropdown-item" href="usuarios/">Gerenciar Usuarios</a>';
                   echo ' <a class="dropdown-item" href="relatorios/usuarios.php">Relatorio</a>';
                 }

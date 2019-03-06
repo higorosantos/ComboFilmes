@@ -1,8 +1,10 @@
 <?php
+date_default_timezone_set('America/Sao_Paulo');
 
 include "../config.php";
 
 $id = NULL;
+$tipo = $_POST["tipo"];
 $titulo = $_POST["Titulo"];
 $genero = $_POST["Genero"];
 $pais = $_POST["Pais"];
@@ -13,6 +15,8 @@ $imagem = $_FILES["imagem"];
 $nimagem = $imagem["name"];
 $local = "../img/filmes_uploads/";
 $arquivo = $local . $imagem["name"];
+$video = NULL;
+$dataCadastro = date('Y-m-d H:i:s');;
 
 
 
@@ -24,7 +28,7 @@ $result = mysqli_num_rows($query);
 
 if ($result == 0){
     move_uploaded_file($imagem["tmp_name"],$arquivo);
-    $query = mysqli_query($conect,"INSERT INTO filme VALUES ('$id','$titulo','$genero','$duracao','$pais','$censura','$nimagem','$sinopse')") or die(mysqli_error());
+    $query = mysqli_query($conect,"INSERT INTO filme VALUES ('$id','$tipo','$titulo','$genero','$duracao','$pais','$censura','$nimagem','$video','$sinopse','$dataCadastro')") or die(mysqli_error());
     echo "<script>alert('Cadastro de filme efetuado com sucesso!');</script>";
     echo "<script>window.location='../filmes/cadastro_filme.php';</script>";
 }

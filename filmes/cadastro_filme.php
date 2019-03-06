@@ -43,6 +43,17 @@ if($_SESSION["privilegio"] == 2 ){
     </div>
     <div class="row">
       <div class="col-25">
+        <label for="Genero">Genero</label>
+      </div>
+      <div class="col-75">
+        <select id="Tipo" name="tipo" style="cursor: pointer">
+          <option value="filme">Filme</option>
+          <option value="serie">Serie</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
         <label for="fname">Pais de origem</label>
       </div>
       <div class="col-75">
