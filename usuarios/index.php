@@ -33,6 +33,11 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
 
   <!-- Coded with love by Mutiullah Samim-->
   <body>
+    <div >
+
+    <a  href="../principal.php" ><button   type="submit" name="retornar" style="margin:10px;
+      float: right ;  background:rgb(0, 255, 0); border-radius: 10px; border: 1px solid rgb(0, 255, 0) ;">Retornar</button></a>
+</div>
     <div>
     <form method="POST" action="#">
       <div class="d-flex justify-content-center">
@@ -77,6 +82,8 @@ $query = mysqli_query($conect, "SELECT * FROM usuario WHERE nome LIKE  '$pesquis
   
 ?>
 <!-- Script que Muda o Action -->
+
+
 
   </body>
 </html>

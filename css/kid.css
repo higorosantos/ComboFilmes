@@ -1,18 +1,25 @@
 body{
-    background-color: black;
+    background: url(../img/kids/fundokids.jpg);
+    background-size: center;
+
 }
 header{
     height: 60px;
+    background-color: black;
+    
 }
 h1{
     margin-left: 10px;
+    background-color: rgba(0,0,0,0.6)
+    
+    
 }
-
 .base{
     height: 70px;
     color: white;
     margin-top: 25px;
     margin-bottom: 25px;
+    background-color: black;
     
 }
 .base a{
@@ -23,7 +30,7 @@ h1{
 
 }
 .base a:hover{
-    color: black;
+    color: red;
     transition: 2s;
 
 }
@@ -52,32 +59,19 @@ h1{
 }
 .slide{
     margin-left: 15px;
+    
 }
 .divtext{
     color: #21d192;
     margin-left: 10px;
     margin-top: 30px;
+    background-color: rgba(0,0,0,0.6)
 }
 .slideimg img{
     width: 100%;
-   
+    
 }
-/*carosel*/
-.blog .carousel-indicators {
-	left: 0;
-	top: auto;
-    bottom: -40px;
-
-}
-
-/* The colour of the indicators */
-.blog .carousel-indicators li {
-    background: #a3a3a3;
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-}
-
-.blog .carousel-indicators .active {
-background: #707070;
+.carousel-caption{
+    
+    background-color: rgba(0,0,0,0.6);
 }
