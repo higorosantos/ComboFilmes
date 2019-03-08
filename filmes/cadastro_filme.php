@@ -26,46 +26,68 @@ if($_SESSION["privilegio"] == 2 ){
     <link rel="stylesheet" href="../css/cadastro_filme.css">
 </head>
 
-<label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;">Cadastro de Filmes</label>
-
+<label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;" id="filme">Cadastro de Filmes</label>
+<label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;" class="series" >Cadastro de Series</label>
 
 <body class="dody" >
     <div class="form-group">
     <div class="container">
   <form method="POST" action="../acao/cadastrando_filmes.php" enctype="multipart/form-data">
     <div class="row">
-      <div class="col-25">
-        <label for="fname">Titulo do filme</label>
+      <div class="col-25" class="filme">
+        <label for="fname" id="lname">Titulo do filme</label>
       </div>
-      <div class="col-75">
+      <div class="col-75"  class="filme">
         <input type="text" id="fname" name="Titulo" placeholder="">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
-        <label for="Genero">Genero</label>
+      <div class="col-25" class="serie">
+        <label for="fname"  class="series" id="lname">Titulo da Serie</label>
+      </div>
+      <div class="col-75"  class="filme">
+        <input type="text" id="fname" class="series" name="Titulo" placeholder="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25"  class="filme">
+        <label for="Genero">Tipo</label>
       </div>
       <div class="col-75">
-        <select id="Tipo" name="tipo" style="cursor: pointer">
-          <option value="filme">Filme</option>
-          <option value="serie">Serie</option>
+        <select id="Tipo" name="tipo" onchange="validar();" style="cursor: pointer">
+          <option value="filme" >Filme</option>
+          <option value="serie" >Serie</option>
         </select>
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      <div class="col-25"  class="filme">
         <label for="fname">Pais de origem</label>
       </div>
-      <div class="col-75">
+      <div class="col-75"  class="filme">
         <input type="text" id="fname" name="Pais" placeholder="">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
-        <label for="fname">Duração</label>
+      <div class="col-25"  class="filme">
+        <label for="fname" id="ltemporadas"  class="series" >Temporadas</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="Duracao" placeholder="">
+        <select id="Tipo" name="temporadas"   class="series"  style="cursor: pointer;">
+          <option value="1" >1 Temporada</option>
+          <option value="2" >2 Temporadas</option>
+          <option value="3" >3 Temporadas</option>
+          <option value="4" >4 Temporadas</option>
+          <option value="5" >5 Temporadas</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25"  class="filme">
+        <label for="fname" id="lduracao">Duração</label>
+      </div>
+      <div class="col-75"  class="filme">
+        <input type="text" id="duracao" name="Duracao" placeholder="">
       </div>
     </div>
     <div class="row">
@@ -124,6 +146,34 @@ if($_SESSION["privilegio"] == 2 ){
    
 </div>
 </body>
+<script>
+   function validar() {
+        var teste = document.getElementById("Tipo").value;
+        if(teste == "serie"){
+          document.getElementById("lname").style.display = "none";
+          document.getElementById("fname").style.display = "none";
+          document.getElementById("duracao").style.display = "none";
+          document.getElementById("lduracao").style.display = "none";
+          document.getElementById("filme").style.display = "none";
+          document.getElementById("lnames").style.display = "block";
+          document.getElementById("sname").style.display = "block";
+          document.getElementById("temporadas").style.display = "block";
+          document.getElementById("ltemporada").style.display = "block";
+          document.getElementById("series").style.display = "block";
+          console.log(teste);
+        }
+        else{
+          document.getElementById("lname").style.display = "block";
+          document.getElementById("fname").style.display = "block";
+          document.getElementById("duracao").style.display = "block";
+          document.getElementById("lduracao").style.display = "block";
+          document.getElementById("filme").style.display = "block";
+
+        }
+        
+      
+    }
+</script>
 <?php
 }
 else{

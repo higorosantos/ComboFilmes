@@ -85,8 +85,14 @@ h1{
 .blog .carousel-indicators .active {
 background: #707070;
 }
+<<<<<<< HEAD
 .carousel-control-prev-icon,.carousel-control-next-icon{
     height: 50px;
     width: 30%;
     
 }
+=======
+.series{
+    display:none;
+}
+>>>>>>> 977b0add2526927eb449620d2a295d5da32fadb6
