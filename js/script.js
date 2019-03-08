@@ -21,4 +21,3 @@ $(window).on("scroll", function () {
 console.log("TomA")
 }, 300));
 
-

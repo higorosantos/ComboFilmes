@@ -33,14 +33,12 @@ h1{
 }
 .perfil{
     float: right;
-    margin-right: 25px;
+    margin-right: 0px;
     
 }
 .btn{
     background-color: transparent;
     border: transparent;
-    
-    
 }
 
 .btn:hover{
@@ -49,6 +47,12 @@ h1{
 }
 .dropdown-menu{
     background-color: #21d192;
+}
+.not{
+    float: right;
+}
+.dropdown-toggle::after{
+    border-top: 0px;
 }
 .slide{
     margin-left: 15px;
@@ -80,4 +84,9 @@ h1{
 
 .blog .carousel-indicators .active {
 background: #707070;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+    height: 50px;
+    width: 30%;
+    
 }
