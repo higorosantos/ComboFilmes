@@ -1,4 +1,14 @@
 <?php
+if($_POST["titulo"] == "" && $_POST["sinopse"] == ""){
+    echo "<script>alert('Há campos em branco!')</script>";
+    echo "<script>window.location='../filmes/cadastro_filme.php';</script>";
+
+
+}
+else{
+    cadastrarFilme();
+}
+function cadastrarFilme(){
 date_default_timezone_set('America/Sao_Paulo');
 
 include "../config.php";
@@ -36,6 +46,8 @@ else{
     echo "<script>alert('Filme ja cadastrado!');</script>";
     echo "<script>window.location='../filmes/cadastro_filme.php';</script>";
     
+}
+
 }
 
 ?>
