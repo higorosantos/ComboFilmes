@@ -4,10 +4,6 @@ body{
 header{
     height: 60px;
 }
-h1{
-    margin-left: 10px;
-}
-
 .base{
     height: 70px;
     color: white;
@@ -62,6 +58,7 @@ h1{
     color: #21d192;
     margin-left: 10px;
     margin-top: 30px;
+    height: 150px;
 }
 .slideimg img{
     width: 100%;
@@ -93,4 +90,30 @@ background: #707070;
 .carousel-control-prev-icon:hover,.carousel-control-next-icon:hover{
     height: 80px;
     background-color: #21d1939a
+}
+.box{
+        background-color: rgba(0, 0, 0, 0.863) ;
+        width: 1500px;
+        border: 25px solid #21d192;
+        padding: 25px;
+        border-radius: 10%;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.918);
+}
+.titulo{
+    width: 20%;
+    
+    float: left;
+}
+.genero{
+    width: 20%;
+    
+}
+.generos{
+    text-decoration: none;
+    color: #21d192;
+}
+.generos:hover{
+    text-decoration: none;
+    color: #FFC312
 }
