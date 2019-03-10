@@ -1,0 +1,119 @@
+body{
+    background-color: black;
+}
+header{
+    height: 60px;
+}
+.base{
+    height: 70px;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+}
+.base a{
+    color:white;
+    text-decoration: none;
+    font-size: 40pt;
+
+
+}
+.base a:hover{
+    color: black;
+    transition: 2s;
+
+}
+
+#carouselmain{
+    margin: 0px;
+}
+.perfil{
+    float: right;
+    margin-right: 0px;
+    
+}
+.btn{
+    background-color: transparent;
+    border: transparent;
+}
+
+.btn:hover{
+    background-color: #21d192;
+    color: black;
+}
+.dropdown-menu{
+    background-color: #21d192;
+}
+.not{
+    float: right;
+    width: 90px;
+}
+.dropdown-toggle::after{
+    border-top: 0px;
+}
+.slide{
+    margin-left: 15px;
+}
+.divtext{
+    color: #21d192;
+    margin-left: 10px;
+    margin-top: 30px;
+    height: 150px;
+}
+.slideimg img{
+    width: 100%;
+   
+}
+/*carosel*/
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+    height: 30px;
+    width: 80px;
+}
+.carousel-control-prev-icon:hover,.carousel-control-next-icon:hover{
+    height: 80px;
+    background-color: #21d1939a
+}
+.box{
+        background-color: rgba(0, 0, 0, 0.863) ;
+        width: 1500px;
+        border: 25px solid #21d192;
+        padding: 25px;
+        border-radius: 10%;
+        margin-top: 50px;
+        color: rgba(255, 255, 255, 0.918);
+}
+.titulo{
+    width: 20%;
+    
+    float: left;
+}
+.genero{
+    width: 20%;
+    
+}
+.generos{
+    text-decoration: none;
+    color: #21d192;
+}
+.generos:hover{
+    text-decoration: none;
+    color: #FFC312
+}

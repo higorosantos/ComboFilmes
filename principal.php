@@ -190,32 +190,9 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                         <div class="slime carousel-item active">
                                             <div class="row">
                                                 <div class="col-md-2">
-
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                                    <img src="img/anime/anime1.jpg" alt="Image" style="max-width:100%;">
-                                                    </button>
-
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    ...
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
+                                                <a href="assistir.php">
+                                                        <img src="img/anime/anime1.jpg" alt="Image" style="max-width:100%;">
+                                                    </a>
                                                 </div>
                                                 <div class="col-md-2">
                                                     <a href="#">
@@ -270,10 +247,10 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                     <!--.carousel-inner-->
                                 </div>
                                 <!--.Carousel-->
-                                <a class="carousel-control-prev" href="#cu2" data-slide="prev">
+                                <a class="carousel-control-prev" href="#cu2" data-slide="prev" style="width: 40px;">
                                     <span class="carousel-control-prev-icon"></span>
                                 </a>
-                                <a class="carousel-control-next" href="#cu2" data-slide="next">
+                                <a class="carousel-control-next" href="#cu2" data-slide="next" style="width: 40px;">
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
                             </div>
@@ -345,6 +322,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                                 </div>
                                             </div>
                                             <!--.row-->
+                                            
                                         </div>
                                         <!--.item-->
 
@@ -352,13 +330,14 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                                     <!--.carousel-inner-->
                                 </div>
                                 <!--.Carousel-->
-                                <a class="carousel-control-prev" href="#cu3" data-slide="prev">
+                                <a class="carousel-control-prev" href="#cu3" data-slide="prev" style="width: 40px;">
                                     <span class="carousel-control-prev-icon"></span>
                                 </a>
-                                <a class="carousel-control-next" href="#cu3" data-slide="next">
+                                <a class="carousel-control-next" href="#cu3" data-slide="next" style="width: 40px;">
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
                             </div>
+                            
                         </div>
 
                 </section>
