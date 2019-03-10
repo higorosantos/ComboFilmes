@@ -2,15 +2,15 @@
 session_start();
 include "config.php";
 if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
-    $query = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=1 and id_filme<=7")or die(myqli_erro());
-    $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=16")or die(myqli_erro());
-?>
+    $query = mysqli_query($conect,"SELECT * FROM filme ORDER BY data_cadastro DESC")or die(myqli_erro());
+  ?>
     <html>
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Combo Filmes</title>
+      
 
 
 
@@ -25,18 +25,20 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <link href="css/principal.css" rel="stylesheet">
         <script src="js/jsprincipal.js"></script>
         <style>
             .slime img {
                 width: 200px;
                 height: 130px;
-
             }
         </style>
+        <!-- JS DO SLIDE novo -->
+        <script src="js/carrousel.js"></script>
+        <link href="css/principal.css" rel="stylesheet">
     </head>
 
     <body class="container">
@@ -134,86 +136,44 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
 
         </section>
-        <div class="masterbox">
-            <div class="divtext">
-                <h3>Em Alta !</h3>
-                <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
+        <div class="divtext" style="margin-bottom:-50px;">
+                    <h3>Em Alta</h3>
+                    <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
+                </div>
+        <div class="slider"> 
+      <span onmouseover="scrollEsquerda()" onmouseout="clearScroll()" class="handle handlePrev active">
+        <i class="fa fa-caret-left" aria-hidden="true"></i>
+      </span>
 
-                <section>
-                    <div class="slide">
-                        <div class="row blog">
-                            <div class="col-md-12">
-                                <div id="cu" class="carousel slide" data-ride="carousel">
+      <div id="scroller" class="row">
+        <div class="row__inner">
+          <?php
+         while($campos = mysqli_fetch_array($query)){
+           $diretorio = "img/filmes_uploads/";
+           $imagem = $diretorio . $campos["url_img"];
 
-                                    <!-- Carousel items -->
-                                    <div class="carousel-inner">
+          echo  '<div class="gui-card">';
+          echo  '<div class="gui-card__media">';
+          echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
+          echo   '</div>';
+          echo  '<div class="gui-card__details">';
+          echo    '<div class="gui-card__title">';
+          echo $campos['titulo'];
+          echo     "</div>";
+          echo "</div>";
+          echo "</div>";
+        }
+?>
+          
+        </div>
 
-                                        <div class="slime carousel-item active">
-                                            <div class="row">
-                                                <?php
-                                        $lista  = mysqli_num_rows($query);
-                                       
-                                         while($campos = mysqli_fetch_array($query)){
-                                            $diretorio = "img/filmes_uploads/";
-                                            $imagem = $diretorio . $campos["url_img"];
-                                            echo '<div class="col-md-2">';
-                                            echo '<a href="#">';
-                                            echo '<img src="',$imagem,'" alt="Image" style="max-width:100%;">';
-                                            echo ' </a>';
-                                            echo '</div>';
-                            
-                                            
-                                        
-                                        }
-                                        
-                                        
-                                        ?>
-                                            </div>
-                                            <!--.row-->
-                                        </div>
-                                        <!--.item-->
+      </div>
+      <span onmouseover="scrollDireita()" onmouseout="clearScroll()"  class="handle handleNext active">
+        <i class="fa fa-caret-right" aria-hidden="true"></i>
+      </span>
+    </div>
 
-                                        <div class="slime carousel-item">
-                                            <div class="row">
-                                                <?php
-                                       
-                                            while($campos = mysqli_fetch_array($query2)){
-                                                $diretorio = "img/filmes_uploads/";
-                                                $imagem = $diretorio . $campos["url_img"];
-                                                echo '<div class="col-md-2">';
-                                                echo '<a href="#">';
-                                                echo '<img src="',$imagem,'" alt="Image" style="max-width:100%;">';
-                                                echo ' </a>';
-                                                echo '</div>';
-                                
-                                                
-                                             }
-                                            
-
-                                        
-
-                                        ?>
-
-                                            </div>
-                                            <!--.row-->
-                                        </div>
-                                        <!--.item-->
-
-                                    </div>
-                                    <!--.carousel-inner-->
-                                </div>
-                                <!--.Carousel-->
-                                <a class="carousel-control-prev" href="#cu" data-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </a>
-                                <a class="carousel-control-next" href="#cu" data-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
+</div>
                 <div class="divtext">
                     <h3>Animes</h3>
                     <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
@@ -432,5 +392,4 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 else{
     echo "<script>window.location='index.php';</script>";
 }
-
 ?>

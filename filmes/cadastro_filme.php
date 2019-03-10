@@ -27,7 +27,7 @@ if($_SESSION["privilegio"] == 2 ){
 </head>
 
 <label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;" id="filme">Cadastro de Filmes</label>
-<label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;" class="series" >Cadastro de Series</label>
+<label style="color: white;font-size:40px;font-family:Colibri,Comic Sans;" id="serie" class="series" >Cadastro de Series</label>
 
 <body class="dody" >
     <div class="form-group">
@@ -43,10 +43,10 @@ if($_SESSION["privilegio"] == 2 ){
     </div>
     <div class="row">
       <div class="col-25" class="serie">
-        <label for="fname"  class="series" id="lname">Titulo da Serie</label>
+        <label for="fname"  class="series" id="lnames">Titulo da Serie</label>
       </div>
       <div class="col-75"  class="filme">
-        <input type="text" id="fname" class="series" name="Titulo" placeholder="">
+        <input type="text" id="sname" class="series" name="Titulo" placeholder="">
       </div>
     </div>
     <div class="row">
@@ -73,12 +73,12 @@ if($_SESSION["privilegio"] == 2 ){
         <label for="fname" id="ltemporadas"  class="series" >Temporadas</label>
       </div>
       <div class="col-75">
-        <select id="Tipo" name="temporadas"   class="series"  style="cursor: pointer;">
-          <option value="1" >1 Temporada</option>
-          <option value="2" >2 Temporadas</option>
-          <option value="3" >3 Temporadas</option>
-          <option value="4" >4 Temporadas</option>
-          <option value="5" >5 Temporadas</option>
+        <select id="temporadas" name="temporadas"   class="series"  style="cursor: pointer;">
+          <option value="1" >1º Temporada</option>
+          <option value="2" >2º Temporada</option>
+          <option value="3" >3º Temporada</option>
+          <option value="4" >4º Temporada</option>
+          <option value="5" >5º Temporada</option>
         </select>
       </div>
     </div>
@@ -158,8 +158,8 @@ if($_SESSION["privilegio"] == 2 ){
           document.getElementById("lnames").style.display = "block";
           document.getElementById("sname").style.display = "block";
           document.getElementById("temporadas").style.display = "block";
-          document.getElementById("ltemporada").style.display = "block";
-          document.getElementById("series").style.display = "block";
+          document.getElementById("ltemporadas").style.display = "block";
+          document.getElementById("serie").style.display = "block";
           console.log(teste);
         }
         else{
@@ -168,7 +168,11 @@ if($_SESSION["privilegio"] == 2 ){
           document.getElementById("duracao").style.display = "block";
           document.getElementById("lduracao").style.display = "block";
           document.getElementById("filme").style.display = "block";
-
+          document.getElementById("lnames").style.display = "none";
+          document.getElementById("sname").style.display = "none";
+          document.getElementById("temporadas").style.display = "none";
+          document.getElementById("ltemporadas").style.display = "none";
+          document.getElementById("serie").style.display = "none";
         }
         
       
