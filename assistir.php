@@ -15,6 +15,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -94,6 +95,92 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 </div>
 
 </div>
+<section id="comentar"class="box2 container">
+    <h1>Deixe seu comentário</h1>
+    <form class="comentario">
+      <input type="text" name="name" class="form-control" placeholder="name" required style="margin-bottom:10px; width:70%;">
+      <input type="Email" name="email" class="form-control" placeholder="Email" required style="margin-bottom:10px; width:70%;">
+      <div class="form-group">
+    <label for="exampleFormControlTextarea1">Comentário</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" style="width:70%;"></textarea>
+    <input id="btncoment"type="submit" class="btn btn-primary" value="Publicar Comentário">
+    <input id="btncoment"type="reset" onclick="myFunction()" class="btn btn-default" value="Cancelar">
+
+  </div>
+    </form>
+    
+</section>
+
+<section>
+<div class="coment container">
+    <div class="row">
+        <div class="comments col-md-9" id="comments">
+            <h3 class="mb-2">Comentários</h3>
+            <!-- comment -->
+            <div class="comment mb-2 row">
+                <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
+                    <a href=""><img class="mx-auto rounded-circle img-fluid" src="http://demos.themes.guide/bodeo/assets/images/users/m103.jpg" alt="avatar"></a>
+                </div>
+                <div class="comment-content col-md-11 col-sm-10">
+                    <h4 class="">Bryn </h4>
+                    <p>Today, 2:38<p>
+                    <div class="comment-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href>http://wwwwww.com</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                            <br>
+                            <a href="" class="text-right small"><i class="ion-reply"></i> Reply</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- reply is indented -->
+                <div class="comment-reply col-md-11 offset-md-1 col-sm-10 offset-sm-2">
+                    <div class="row">
+                        <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
+                            <a href=""><img class="mx-auto rounded-circle img-fluid" src="http://demos.themes.guide/bodeo/assets/images/users/m101.jpg" alt="avatar"></a>
+                        </div>
+                        <div class="comment-content col-md-11 col-sm-10 col-12">
+                        <h4 class="">Tom </h4>
+                    <p>Today, 2:38<p>
+                            <div class="comment-body">
+                                <p>Really?? Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.
+                                    <br>
+                                    <a href="" class="text-right small"><i class="ion-reply"></i> Reply</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!-- /reply is indented -->
+            </div>
+            <!-- /comment -->
+            <!-- comment -->
+            <div class="comment mb-2 row">
+                <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
+                    <a href=""><img class="mx-auto rounded-circle img-fluid" src="http://demos.themes.guide/bodeo/assets/images/users/w102.jpg" alt="avatar"></a>
+                </div>
+                <div class="comment-content col-md-11 col-sm-10">
+                    <h4 class="">Maria </h4>
+                    <p>Today, 2:38<p>
+                    <div class="comment-body">
+                        <p>Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                            <br>
+                            <a href="" class="text-right small"><i class="ion-reply"></i> Reply</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /comment -->
+            <div class="row pt-2">
+                <div class="col-12">
+                    <a id="btncoment" href="" class="btn btn-sm btn-primary">Comment</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
 <section class="testando123 " >
   
   <h1 class="text-center" style="color:#21d192;">Recomendados</h1>
