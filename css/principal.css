@@ -86,7 +86,6 @@ h1{
 .blog .carousel-indicators .active {
 background: #707070;
 }
-<<<<<<< HEAD
 
 /* CSS DO NOVO SLIDE */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
@@ -278,13 +277,3 @@ p {
 }
 
 
-=======
-.carousel-control-prev-icon,.carousel-control-next-icon{
-    height: 30px;
-    width: 80px;
-}
-.carousel-control-prev-icon:hover,.carousel-control-next-icon:hover{
-    height: 80px;
-    background-color: #21d1939a
-}
->>>>>>> 107c61c20cc5fd19489bd9a0a437c7a45d338d34
