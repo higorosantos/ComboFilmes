@@ -13,7 +13,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
     $duracao = $resultado[4];
     $censura = $resultado[6];
     $pais = $resultado[5];
-    $filme = $resultado[9];
+    $filme = $resultado[8];
 
     if($censura == "0"){
         $censura = "Livre";
@@ -98,7 +98,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
 <div class="box container">
 <div>
-  <iframe width="100%" height="550" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="550" src="<?php echo $filme; ?>rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
     <div class="content" >
   <h1 class="titulo"><?php echo $titulo;  ?></h1>
