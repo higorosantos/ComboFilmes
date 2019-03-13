@@ -4,6 +4,8 @@ include "config.php";
 if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
     $query = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=1 and id_filme<=7")or die(myqli_erro());
     $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=12")or die(myqli_erro());
+    //$comentario= mysqli_query($conect,"SELECT * FROM comentario WHERE id_filme='$_GET['id']'")or die(mysqli_erro());
+
 ?>
 <html>
 
@@ -98,7 +100,6 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 <section id="comentar"class="box2 container">
     <h1>Deixe seu comentário</h1>
     <form class="comentario">
-      <input type="text" name="name" class="form-control" placeholder="name" required style="margin-bottom:10px; width:70%;">
       <input type="Email" name="email" class="form-control" placeholder="Email" required style="margin-bottom:10px; width:70%;">
       <div class="form-group">
     <label for="exampleFormControlTextarea1">Comentário</label>
@@ -109,77 +110,58 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
   </div>
     </form>
     
+    
 </section>
+<div class="container">
+    <?php
+	echo '<div class="card">';
+	echo    '<div class="card-body">';
+	echo        '<div class="div_coment row">';
+    echo   	    '<div class="col-sm-2">
+        	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+        	        <p class="text-secondary text-center">15 Minutes Ago</p>
+        	    </div>';
+    echo   	    '<div class="col-sm-10">
+        	        <p>
+        	            <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
 
-<section>
-<div class="coment container">
-    <div class="row">
-        <div class="comments col-md-9" id="comments">
-            <h3 class="mb-2">Comentários</h3>
-            <!-- comment -->
-            <div class="comment mb-2 row">
-                <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
-                    <a href=""><img class="mx-auto rounded-circle img-fluid" src="http://demos.themes.guide/bodeo/assets/images/users/m103.jpg" alt="avatar"></a>
-                </div>
-                <div class="comment-content col-md-11 col-sm-10">
-                    <h4 class="">Bryn </h4>
-                    <p>Today, 2:38<p>
-                    <div class="comment-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href>http://wwwwww.com</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-                            <br>
-                            <a href="" class="text-right small"><i class="ion-reply"></i> Reply</a>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- reply is indented -->
-                <div class="comment-reply col-md-11 offset-md-1 col-sm-10 offset-sm-2">
-                    <div class="row">
-                        <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
-                            <a href=""><img class="mx-auto rounded-circle img-fluid" src="http://demos.themes.guide/bodeo/assets/images/users/m101.jpg" alt="avatar"></a>
-                        </div>
-                        <div class="comment-content col-md-11 col-sm-10 col-12">
-                        <h4 class="">Tom </h4>
-                    <p>Today, 2:38<p>
-                            <div class="comment-body">
-                                <p>Really?? Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.
-                                    <br>
-                                    <a href="" class="text-right small"><i class="ion-reply"></i> Reply</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <!-- /reply is indented -->
-            </div>
-            <!-- /comment -->
-            <!-- comment -->
-            <div class="comment mb-2 row">
-                <div class="comment-avatar col-md-1 col-sm-2 text-center pr-1">
-                    <a href=""><img class="mx-auto rounded-circle img-fluid" src="http://demos.themes.guide/bodeo/assets/images/users/w102.jpg" alt="avatar"></a>
-                </div>
-                <div class="comment-content col-md-11 col-sm-10">
-                    <h4 class="">Maria </h4>
-                    <p>Today, 2:38<p>
-                    <div class="comment-body">
-                        <p>Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-                            <br>
-                            <a href="" class="text-right small"><i class="ion-reply"></i> Reply</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- /comment -->
-            <div class="row pt-2">
-                <div class="col-12">
-                    <a id="btncoment" href="" class="btn btn-sm btn-primary">Comment</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
+        	       </p>
+        	       <div class="clearfix"></div>
+        	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        	        <p>
+        	            <a id="btncoment" class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+        	            <a id="btncoment" class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+        	       </p>
+        	    </div>
+            </div>';
+            ?>
+	        	<div class="card card-inner">
+            	    <div class="card-body">
+            	        <div class="row">
+                    	    <div class="col-sm-2">
+                    	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                    	        <p class="text-secondary text-center">15 Minutes Ago</p>
+                    	    </div>
+                    	    <div class="col-sm-10">
+                    	        <p><a href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a></p>
+                    	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    	        <p>
+                    	            <a id="btncoment" class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>
+                    	            <a id="btncoment" class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                    	       </p>
+                    	    </div>
+            	        </div>
+            	    </div>
+	            </div>
+	    </div>
+	</div>
 </div>
+<section>
+
 </section>
 <section class="testando123 " >
   
