@@ -160,11 +160,12 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
           echo  '<div class="gui-card">';
           echo  '<div class="gui-card__media">';
-          echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
+          echo  '<img class="gui-card__img" src="',$imagem,'" alt="filme"  />';
           echo   '</div>';
-          echo  '<div class="gui-card__details">';
+          echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
           echo    '<div class="gui-card__title">';
           echo $campos['titulo'];
+          echo "<input type='hidden' id='nomefilme' value=",$campos['id_filme'],"></input>";
           echo     "</div>";
           echo "</div>";
           echo "</div>";
@@ -314,6 +315,13 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
                 </div>
             </div>
     </section>
+    <script>
+    function enviar(titulo){
+       var titulo = titulo;
+       window.location='assistir.php?titulo='+ titulo;
+    console.log(titulo);
+}
+    </script>
 
 </body>
 

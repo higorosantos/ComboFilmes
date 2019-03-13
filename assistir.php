@@ -1,11 +1,34 @@
 <?php
 session_start();
 include "config.php";
+$id_filme =  $_GET['titulo'];
 if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
     $query = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=1 and id_filme<=7")or die(myqli_erro());
+<<<<<<< HEAD
     $query2 = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme>=8 and id_filme<=12")or die(myqli_erro());
     //$comentario= mysqli_query($conect,"SELECT * FROM comentario WHERE id_filme='$_GET['id']'")or die(mysqli_erro());
 
+=======
+    $filme = mysqli_query($conect,"SELECT * FROM filme WHERE id_filme='$id_filme'")or die(myqli_erro());
+
+    $resultado = mysqli_fetch_row($filme);
+    $titulo =  $resultado[2];
+    $genero = $resultado[3];
+    $sinopse = $resultado[9];
+    $duracao = $resultado[4];
+    $censura = $resultado[6];
+    $pais = $resultado[5];
+    $filme = $resultado[8];
+
+    if($censura == "0"){
+        $censura = "Livre";
+    }
+    else{
+        $censura = $censura . " Anos";
+    }
+    
+    
+>>>>>>> 56a460fd627291dc334421ec3de495c7fc2644f9
 ?>
 <html>
 
@@ -81,18 +104,28 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
 <div class="box container">
 <div>
-  <iframe width="100%" height="550" src="https://www.youtube.com/embed/ngMTM0FqBRw?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="550" src="<?php echo $filme; ?>rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
     <div class="content" >
-  <h1 class="titulo">Frozen 2</h1>
+  <h1 class="titulo"><?php echo $titulo;  ?></h1>
   <h6 class="genero">Genero<h6>
   <div>
-      <a href="#" class="generos">Animação</a>
-      <a href="#" class="generos">Humor</a>
-      <a href="#" class="generos">3D</a>
+      <a href="#" class="generos"><?php echo ucfirst($genero); ?></a>
+  </div>
+  <h6 class="genero">Duração<h6>
+  <div>
+      <a href="#" class="generos"><?php echo $duracao,' Min' ; ?></a>
+  </div>
+  <h6 class="genero">Censura<h6>
+  <div>
+      <a href="#" class="generos"><?php echo $censura; ?></a>
+  </div>
+  <h6 class="genero">País de origem<h6>
+  <div>
+      <a href="#" class="generos"><?php echo $pais ; ?></a>
   </div>
   <h6>Descrição<h6>
-  <p>Em Breve na Combo Filmes. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fugiat eius dolore impedit, expedita corrupti incidunt voluptatum id optio velit doloremque cum, fugit, atque tenetur nulla dolorum ab at officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo ratione quam, pariatur provident sequi atque excepturi odio repellendus earum non aliquid cumque doloribus velit corporis unde necessitatibus sed ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente mollitia doloribus, consequuntur nobis sit sunt error excepturi earum temporibus praesentium fugit enim blanditiis quia quae pariatur dicta iure at?</p>
+  <p><?php echo $sinopse; ?></p>
 
 </div>
 
