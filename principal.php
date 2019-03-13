@@ -165,7 +165,6 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
           echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
           echo    '<div class="gui-card__title">';
           echo $campos['titulo'];
-          echo "<input type='hidden' id='nomefilme' value=",$campos['id_filme'],"></input>";
           echo     "</div>";
           echo "</div>";
           echo "</div>";
@@ -186,7 +185,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
         <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
     </div>
     <div class="slider">
-        <span onmouseover="scrollAcaoDireita()" onmouseout="clearScrollAcao()" class="handle handlePrev active">
+        <span onmouseover="scrollEsquerda()" onmouseout="clearScrollAcao()" class="handle handlePrev active">
             <i class="fa fa-caret-left" aria-hidden="true"></i>
         </span>
 
@@ -201,7 +200,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
           echo  '<div class="gui-card__media">';
           echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
           echo   '</div>';
-          echo  '<div class="gui-card__details">';
+          echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
           echo    '<div class="gui-card__title">';
           echo $campos['titulo'];
           echo     "</div>";
@@ -240,7 +239,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
           echo  '<div class="gui-card__media">';
           echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
           echo   '</div>';
-          echo  '<div class="gui-card__details">';
+          echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
           echo    '<div class="gui-card__title">';
           echo $campos['titulo'];
           echo     "</div>";
@@ -278,7 +277,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
           echo  '<div class="gui-card__media">';
           echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
           echo   '</div>';
-          echo  '<div class="gui-card__details">';
+          echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
           echo    '<div class="gui-card__title">';
           echo $campos['titulo'];
           echo     "</div>";

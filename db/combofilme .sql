@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 06-Mar-2019 às 18:37
+-- Generation Time: 13-Mar-2019 às 21:47
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.1
 
@@ -37,6 +37,37 @@ CREATE TABLE `alugado` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `id` int(11) NOT NULL,
+  `nome_usuario` varchar(50) NOT NULL,
+  `id_filme` int(11) NOT NULL,
+  `comentario` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `comentario`
+--
+
+INSERT INTO `comentario` (`id`, `nome_usuario`, `id_filme`, `comentario`) VALUES
+(12, 'Higor Oliveira', 18, 'File mt bom'),
+(13, 'Higor Oliveira', 18, 'Podia ser melhor PORRA'),
+(14, 'Higor Oliveira', 18, 'Esperava mais'),
+(15, 'Higor Oliveira', 18, 'Outro comentario'),
+(16, 'Higor Oliveira', 18, 'MAIS UM COMENTARIO'),
+(17, 'Higor Oliveira', 18, 'MAIS UM COMENTARIO'),
+(18, 'Higor Oliveira', 18, 'MAIS UM COMENTARIO'),
+(19, 'Higor Oliveira', 18, 'comentairo'),
+(20, 'Higor Oliveira', 18, 'comentairo'),
+(21, 'Higor Oliveira', 18, 'cOMENTARIIO'),
+(22, 'Higor Oliveira', 11, 'Comentario'),
+(23, 'Higor Oliveira', 11, 'Filme MUITO BOM PORRA');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `filme`
 --
 
@@ -59,7 +90,7 @@ CREATE TABLE `filme` (
 --
 
 INSERT INTO `filme` (`id_filme`, `tipo`, `titulo`, `genero`, `duracao`, `pais_origem`, `censura`, `url_img`, `url_video`, `sinopse`, `data_cadastro`) VALUES
-(2, '', 'Animais Fantásticos: Os Crimes', 'aventura', 134, 'EUA', 10, 'CinePOP-Animais-Fantásticos.jpg', '', 'Newt Scamander reencontra os queridos amigos Tina Goldstein, Queenie Goldstein e Jacob Kowalski. Ele é recrutado pelo seu antigo professor em Hogwarts, Alvo Dumbledore, para enfrentar o terrível bruxo das trevas Gellert Grindelwald, que escapou da custódia da Macusa (Congresso Mágico dos EUA) e reúne seguidores, dividindo o mundo entre seres de magos sangue puro e seres não-mágicos.', '0000-00-00 00:00:00'),
+(2, '', 'Animais Fantásticos: Os Crimes', 'aventura', 134, 'EUA', 10, 'CinePOP-Animais-Fantásticos.jpg', 'J4YRv-BqakU', 'Newt Scamander reencontra os queridos amigos Tina Goldstein, Queenie Goldstein e Jacob Kowalski. Ele é recrutado pelo seu antigo professor em Hogwarts, Alvo Dumbledore, para enfrentar o terrível bruxo das trevas Gellert Grindelwald, que escapou da custódia da Macusa (Congresso Mágico dos EUA) e reúne seguidores, dividindo o mundo entre seres de magos sangue puro e seres não-mágicos.', '0000-00-00 00:00:00'),
 (3, '', 'Aquaman', 'aventura', 143, 'EUA', 14, 'CinePOP-Aquaman.jpg', '', 'Metade humano e semi atlante, Arthur Curry (Jason Momoa) parte em uma jornada junto de seus aliados Mera (Amber Heard) e Vulko (Willem Dafoe) para encontrar o tridente do rei, uma arma mítica capaz de controlar os sete mares. O trio precisa cumprir seu objetivo antes de Orm (Patrick Wilson), meio-irmão de Arthur que pretende derrubá-lo e tomar o trono de Atlântida.', '0000-00-00 00:00:00'),
 (6, '', 'Vikings', 'acao', 18, 'EUA', 16, 'serie1.jpg', '', 'A série é inspirada nas histórias de invasões, comércio e exploração dos Nórdicos da Escandinávia medieval. A série segue as explorações do lendário líder Viking Ragnar Lothbrok e sua tripulação e família, como notavelmente foi estabelecido nas sagas Ragnars saga Loðbrókar e Ragnarssona þáttr do século XIII, assim como na obra do Saxão Gramático do século XII, Gesta Danorum. As sagas lendárias nórdicas eram parcialmente contos de ficção baseados na tradição oral nórdica, escritas cerca de 200 à 400 anos após os eventos que descrevem. Mais inspirações são tiradas de fontes históricas da época, como os registros do ataque Viking em Lindisfarne, retratado no segundo episódio, ou a conta de Amade ibne Fadalane sobre os Vikings Volga, do século X. A série se passa no início da era viking, marcada pelo ataque de Lindisfarne, em 793.', '0000-00-00 00:00:00'),
 (7, '', 'The Flash', 'aventura', 14, 'EUA', 0, 'serie2.jpg', '', 'Após testemunhar o estranho assassinato de sua mãe e a injusta acusação de seu pai pelo crime, Barry Allen fica sob os cuidados do detetive Joe West e sua filha Iris West. Barry se torna brilhante, mas socialmente, um cientista forense desconhecido trabalhando para o Departamento de Polícia de Central City. Sua obsessão por seu trágico passado faz com que ele fique separado das demais pessoas ao seu redor; ele investiga casos frios, ocorrências paranormais, e vazamentos de ponta de avanços científicos que podem dar uma luz no caso do assassinato de sua mãe. Ninguém acredita em sua descrição do crime — que uma bola de raio com o rosto de um homem invadiu sua casa naquela noite e matou sua mãe — e Barry é forçado a procurar por si mesmo pistas que limpem o nome de seu pai. Quatorze anos depois da morte de sua mãe, uma explosão de um avançado Acelerador de Partículas, durante sua apresentação ao público, banha a cidade com uma forma de radiação previamente desconhecida durante uma tempest', '0000-00-00 00:00:00'),
@@ -67,7 +98,26 @@ INSERT INTO `filme` (`id_filme`, `tipo`, `titulo`, `genero`, `duracao`, `pais_or
 (12, '', 'kingsman', 'aventura', 134, 'EUA', 0, 'Kingsman-3.jpg', '', 'tydydfyfytfytfytfyt', '0000-00-00 00:00:00'),
 (14, '', 'Game of Thrones', 'aventura', 0, 'EUA', 16, 'serie3.jpg', '', '....', '0000-00-00 00:00:00'),
 (16, '', 'O Feeding', 'terror', 0, 'BRONZIL', 18, 'O dia que o jogo bota 3 pedra do caminho.PNG', '', 'A maldição da solo-queue ataca novamente e o inocente raphael achava que seria uma partida normal , mas  o que ele nao esperava era que seu passado lhe perseguiria !', '0000-00-00 00:00:00'),
-(17, '', 'Era uma vez', 'adulto', 120, 'EUA', 14, 'Screen08.png', '', 'E RAPAZ', '2019-03-06 14:11:11');
+(17, '', 'Era uma vez', 'adulto', 120, 'EUA', 14, 'Screen08.png', '', 'E RAPAZ', '2019-03-06 14:11:11'),
+(18, 'serie', 'Todo Mundo  Odeia o Chris', 'comedia', 0, 'EUA', 14, 'todo-mundo-odeia-o-cris.jpg', '', 'Esta comédia narra as desventuras do adolescente Chris nos anos 80 no bairro do Brooklyn. Chris está rodeado por familiares excêntricos, incluindo seu pai Julius, sua mãe Rochelle, sua irmã mimada Tonya e seu irmão Drew que é bastante popular.', '2019-03-10 15:01:29');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `serie`
+--
+
+CREATE TABLE `serie` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(30) NOT NULL,
+  `genero` varchar(20) NOT NULL,
+  `temporada` int(11) NOT NULL,
+  `pais` varchar(20) NOT NULL,
+  `censura` int(11) NOT NULL,
+  `url_img` varchar(80) NOT NULL,
+  `sinopse` varchar(1000) NOT NULL,
+  `dataCadastro` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -100,10 +150,22 @@ INSERT INTO `usuario` (`id`, `nome`, `email`, `pwd`, `privilegio`, `data_cadastr
 --
 
 --
+-- Indexes for table `comentario`
+--
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `filme`
 --
 ALTER TABLE `filme`
   ADD PRIMARY KEY (`id_filme`);
+
+--
+-- Indexes for table `serie`
+--
+ALTER TABLE `serie`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `usuario`
@@ -116,10 +178,22 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT for table `comentario`
+--
+ALTER TABLE `comentario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
 -- AUTO_INCREMENT for table `filme`
 --
 ALTER TABLE `filme`
-  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_filme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `serie`
+--
+ALTER TABLE `serie`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `usuario`
