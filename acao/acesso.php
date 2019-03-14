@@ -25,10 +25,12 @@ else {
    $id = $registro[0];
    $nome = $registro[1];
    $privilegio = $registro[4];
+   $foto_perfil = $registro[6];
    $_SESSION["privilegio"] = $privilegio;
    $_SESSION["nome"] = $nome;
    $_SESSION["id"] = $id; 
-   $_SESSION["acesso"] = 1;  
+   $_SESSION["acesso"] = 1;
+   $_SESSION["fPerfil"] = $foto_perfil;  
    if($privilegio == 1 || $privilegio == 2){
 
    echo "<script>window.location='../principal.php';</script>";

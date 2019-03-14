@@ -6,6 +6,8 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
     $acao = mysqli_query($conect,"SELECT * FROM filme  WHERE genero='ação' ORDER BY titulo ASC")or die(myqli_erro());
     $aventura = mysqli_query($conect,"SELECT * FROM filme  WHERE genero='aventura' ORDER BY titulo ASC")or die(myqli_erro());
     $comedia = mysqli_query($conect,"SELECT * FROM filme  WHERE genero='comedia' ORDER BY titulo ASC")or die(myqli_erro());
+    $terror = mysqli_query($conect,"SELECT * FROM filme  WHERE genero='terror' ORDER BY titulo ASC")or die(myqli_erro());
+    $drama = mysqli_query($conect,"SELECT * FROM filme  WHERE genero='drama' ORDER BY titulo ASC")or die(myqli_erro());
   ?>
 <html>
 
@@ -65,7 +67,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
             <div class="perfil btn-group dropleft">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <img src="img/kk.jpg" alt="Foto de Perfil">
+                    <img class="fotoperfil" src="img/perfil_usuarios/<?php echo $_SESSION["fPerfil"]; ?>" alt="Foto de Perfil">
                 </button>
                 <div class="dropdown-menu">
                     <p class="dropdown-item">
@@ -295,7 +297,83 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
         </span>
     </div>
 </div>
-    <!--test-->
+
+<div class="divtext" style="margin-bottom:-50px;">
+        <h3>Terror</h3>
+        <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
+    </div>
+    <div class="slider">
+        <span onmouseover="scrollEsquerdaTerror()" onmouseout="clearScrollTerror()" class="handle handlePrev active">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+        </span>
+
+        <div id="terror" class="row">
+            <div class="row__inner">
+                <?php
+         while($campos = mysqli_fetch_array($terror)){
+           $diretorio = "img/filmes_uploads/";
+           $imagem = $diretorio . $campos["url_img"];
+
+          echo  '<div class="gui-card">';
+          echo  '<div class="gui-card__media">';
+          echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
+          echo   '</div>';
+          echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
+          echo    '<div class="gui-card__title">';
+          echo $campos['titulo'];
+          echo     "</div>";
+          echo "</div>";
+          echo "</div>";
+        }
+?>
+            </div>
+        
+            
+
+        
+        <span onmouseover="scrollDireitaTerror()" onmouseout="clearScrollTerror()" class="handle handleNext active">
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </span>
+    </div>
+</div>
+<div class="divtext" style="margin-bottom:-50px;">
+        <h3>Drama</h3>
+        <hr class="teal mx-auto accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;" color=#21d192>
+    </div>
+    <div class="slider">
+        <span onmouseover="scrollEsquerdaDrama()" onmouseout="clearScrollDrama()" class="handle handlePrev active">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+        </span>
+
+        <div id="drama" class="row">
+            <div class="row__inner">
+                <?php
+         while($campos = mysqli_fetch_array($drama)){
+           $diretorio = "img/filmes_uploads/";
+           $imagem = $diretorio . $campos["url_img"];
+
+          echo  '<div class="gui-card">';
+          echo  '<div class="gui-card__media">';
+          echo  '<img class="gui-card__img" src="',$imagem,'" alt=""  />';
+          echo   '</div>';
+          echo  '<div class="gui-card__details" onclick="enviar(titulo=',$campos["id_filme"],')">';
+          echo    '<div class="gui-card__title">';
+          echo $campos['titulo'];
+          echo     "</div>";
+          echo "</div>";
+          echo "</div>";
+        }
+?>
+            </div>
+        
+            
+
+        
+        <span onmouseover="scrollDireitaDrama()" onmouseout="clearScrollDrama()" class="handle handleNext active">
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </span>
+    </div>
+</div>
 
     <section>
         <div class="divtext">

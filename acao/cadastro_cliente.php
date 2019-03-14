@@ -3,7 +3,7 @@
 session_start();
 validar();
 
-function cadastrar_cliente($nome,$id,$senha,$email,$privilegio,$data_cadastro){
+function cadastrar_cliente($nome,$id,$senha,$email,$privilegio,$data_cadastro,$local,$arquivo,$imagem,$nimagem){
 include "../config.php";
 
 $query = NULL;
@@ -14,8 +14,10 @@ $query = mysqli_query($conect,"SELECT * FROM usuario where email = '$email'") or
 $resultado = mysqli_num_rows($query);
 
 if ($resultado == 0){
+    move_uploaded_file($imagem["tmp_name"],$arquivo);
+    echo $arquivo;
 
-    $query = mysqli_query($conect,"INSERT INTO usuario VALUES ('$id','$nome','$email','$senha','$privilegio','$data_cadastro')") or die(mysqli_error());
+    $query = mysqli_query($conect,"INSERT INTO usuario VALUES ('$id','$nome','$email','$senha','$privilegio','$data_cadastro','$nimagem')") or die(mysqli_error());
 
     //enviar um formulario invisivel
     echo '<form  name="formulario" method="POST" action="acesso.php">';
@@ -39,6 +41,10 @@ $nome = $_POST["nome"];
 $senha = $_POST["pwd"];
 $email = $_POST["email"];
 $cSenha = $_POST["cpwd"];
+$imagem = $_FILES["imagem"];
+$nimagem = $imagem["name"];
+$local = "../img/perfil_usuarios/";
+$arquivo = $local . $imagem["name"];
 $caracteres = array("!", "@", "#", "$","%","¨","&","*","(",")","-","_","=","+");
 //tamanho do array para o for funcionar.
 $size = count($caracteres);
@@ -69,7 +75,7 @@ elseif($cSenha != $senha){
 }
 
 else{
-    cadastrar_cliente($nome,$id,$senha,$email,$privilegio,$data_cadastro);
+    cadastrar_cliente($nome,$id,$senha,$email,$privilegio,$data_cadastro,$local,$arquivo,$imagem,$nimagem);
 
 }
 

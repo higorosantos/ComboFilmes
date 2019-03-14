@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('America/Sao_Paulo');
 include "config.php";
 $id_filme =  $_GET['titulo'];
 if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["acesso"] == 1){
@@ -9,11 +10,13 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
     $resultado = mysqli_fetch_row($filme);
     $titulo =  $resultado[2];
     $genero = $resultado[3];
-    $sinopse = $resultado[9];
+    $sinopse = $resultado[10];
     $duracao = $resultado[4];
-    $censura = $resultado[6];
-    $pais = $resultado[5];
-    $filme = $resultado[8];
+    $censura = $resultado[7];
+    $pais = $resultado[6];
+    $filme = $resultado[9];
+    $temporada = $resultado[5];
+    $tipo = $resultado[1];
 
     if($censura == "0"){
         $censura = "Livre";
@@ -23,7 +26,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
     }
     
     $recomendado = mysqli_query($conect,"SELECT * FROM filme WHERE genero='$genero'")or die(myqli_erro()); 
-    $l_comentarios = mysqli_query($conect,"SELECT * FROM comentario WHERE id_filme='$id_filme'")
+    $l_comentarios = mysqli_query($conect,"SELECT * FROM comentario WHERE id_filme='$id_filme' ORDER BY  data_comentario DESC");
 ?>
 <html>
 
@@ -78,7 +81,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
       <div class="perfil btn-group dropleft">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
-          <img src="img/kk.jpg" alt="Foto de Perfil">
+          <img class="fotoperfil" src="img/perfil_usuarios/<?php echo $_SESSION["fPerfil"]; ?>" alt="Foto de Perfil">
         </button>
         <div class="dropdown-menu">
           <p class="dropdown-item">
@@ -105,7 +108,7 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
 
     <div class="box container">
       <div>
-        <iframe width="100%" height="550" src="<?php echo "https://www.youtube.com/embed/", $filme; ?>" frameborder="0"
+        <iframe width="100%" height="550" src="<?php echo "https://www.youtube.com/embed/",$filme; ?>" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="content">
@@ -114,9 +117,20 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
             <div>
               <a href="#" class="generos"><?php echo ucfirst($genero); ?></a>
             </div>
-            <h6 class="genero">Duração<h6>
+            
                 <div>
-                  <a href="#" class="generos"><?php echo $duracao,' Min' ; ?></a>
+                <?php
+                if($tipo == "serie"){
+                  echo "<h6 class='genero'>Temporada<h6>";
+                  echo " <a href='#' class='generos'>$temporada º Temporada</a>";
+                  
+                }
+                else{
+                  echo "<h6 class='genero'>Duração<h6>";
+                  echo " <a href='#' class='generos'> $duracao Min</a>";
+
+                }
+                ?>
                 </div>
                 <h6 class="genero">Censura<h6>
                     <div>
@@ -151,7 +165,9 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
     $nome_usuario = $_SESSION["nome"];
     $id_fime  = $_GET["titulo"];
     $texto = $_POST["texto"];
-    $i_comentario = mysqli_query($conect, "INSERT INTO comentario VALUES('$id','$nome_usuario','$id_fime','$texto')")or die(mysqli_error());
+    $foto = $_SESSION["fPerfil"];
+    $dataComentario = date('Y-m-d H:i:s');;
+    $i_comentario = mysqli_query($conect, "INSERT INTO comentario VALUES('$id','$nome_usuario','$id_fime','$texto','$foto','$dataComentario')")or die(mysqli_error());
     echo "<script>window.location='assistir.php?titulo=",$id_filme,"';</script>";
   }
     ?>
@@ -162,12 +178,13 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
       <?php
   
   while($comentarios = mysqli_fetch_array($l_comentarios)){
+  
 	echo '<div class="card">';
 	echo    '<div class="card-body">';
 	echo        '<div class="div_coment row">';
     echo   	    '<div class="col-sm-2">
-        	        <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-        	        <p class="text-secondary text-center">15 Minutes Ago</p>
+        	        <img  class="fotocomentario" src="img/perfil_usuarios/',$comentarios["foto_perfil"],'" class="img img-rounded img-fluid"/>
+        	        
         	    </div>';
     echo   	    '<div class="col-sm-10">';
     echo   	        '<p>';
@@ -180,11 +197,15 @@ if(($_SESSION["privilegio"] == 1 || $_SESSION["privilegio"] == 2) && $_SESSION["
         	       </p>';
     echo       '<div class="clearfix"></div>';
        echo 	        '<p>',$comentarios["comentario"],'</p>';
+       if($_SESSION["privilegio"]== 2){
         echo	        '<p>';
-        echo	            '<a id="btncoment" class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
-        	            <a id="btncoment" class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
-        	       </p>
-        	    </div>
+
+       
+        echo	            '
+        	            <button type="submit" id="btncoment" class="float-right btn text-white btn-danger"> <i class="fa ">Remover Comentario</i></button>
+                 </p>';
+       }
+        echo	    '</div>
             </div>
             </div>
             </div>

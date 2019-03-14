@@ -35,18 +35,10 @@ if($_SESSION["privilegio"] == 2 ){
   <form method="POST" action="../acao/cadastrando_filmes.php" enctype="multipart/form-data">
     <div class="row">
       <div class="col-25" class="filme">
-        <label for="fname" id="lname">Titulo do filme</label>
+        <label for="fname" id="lname">Titulo</label>
       </div>
       <div class="col-75"  class="filme">
         <input type="text" id="fname" name="Titulo" placeholder="">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25" class="serie">
-        <label for="fname"  class="series" id="lnames">Titulo da Serie</label>
-      </div>
-      <div class="col-75"  class="filme">
-        <input type="text" id="sname" class="series" name="Titulo" placeholder="">
       </div>
     </div>
     <div class="row">
@@ -117,7 +109,17 @@ if($_SESSION["privilegio"] == 2 ){
           <option value="terror">Terror</option>
           <option value="adulto">Adulto</option>
           <option value="animacao">Animação</option>
+          <option value="animacao">Drama</option>
         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25"  class="filme">
+        <label for="fname" id="lduracao">Link do video</label>
+      </div>
+      <div class="col-75"  class="filme">
+        <input type="text" id="video" name="video" placeholder="">
+        <p>Obs: Colocar somente o codigo do video. Exemplo: https://www.youtube.com/watch?v=<strong>9sjWU5dGcGI </strong>, so adcionar o <strong>9sjWU5dGcGI.</strong></p>
       </div>
     </div>
     <div class="row">
@@ -130,7 +132,7 @@ if($_SESSION["privilegio"] == 2 ){
     </div>
     <div class="row" style="position:relative">
         <a class='btn btn-primary' href='javascript:;'>
-           CARREGAR FILME
+           CARREGAR IMAGEM
             <input type="file" name="imagem" style='cursor:pointer;position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
         </a>
         &nbsp;
@@ -150,13 +152,9 @@ if($_SESSION["privilegio"] == 2 ){
    function validar() {
         var teste = document.getElementById("Tipo").value;
         if(teste == "serie"){
-          document.getElementById("lname").style.display = "none";
-          document.getElementById("fname").style.display = "none";
           document.getElementById("duracao").style.display = "none";
           document.getElementById("lduracao").style.display = "none";
           document.getElementById("filme").style.display = "none";
-          document.getElementById("lnames").style.display = "block";
-          document.getElementById("sname").style.display = "block";
           document.getElementById("temporadas").style.display = "block";
           document.getElementById("ltemporadas").style.display = "block";
           document.getElementById("serie").style.display = "block";
@@ -169,7 +167,6 @@ if($_SESSION["privilegio"] == 2 ){
           document.getElementById("lduracao").style.display = "block";
           document.getElementById("filme").style.display = "block";
           document.getElementById("lnames").style.display = "none";
-          document.getElementById("sname").style.display = "none";
           document.getElementById("temporadas").style.display = "none";
           document.getElementById("ltemporadas").style.display = "none";
           document.getElementById("serie").style.display = "none";

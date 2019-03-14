@@ -48,7 +48,7 @@
     </header>
 <body class="formcad">
 <section class="container">
-<form class="form1" method="POST" action="acao/cadastro_cliente.php">
+<form class="form1" method="POST" action="acao/cadastro_cliente.php" enctype="multipart/form-data">
 <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
     <div class>
@@ -73,6 +73,13 @@
       <input type="password" name="cpwd"class="form-control" id="inputPassword3" placeholder="Password">
     </div>
   </div>
+  <div class="form-group">
+    <label for="inputPassword3" fotoclass="col-form-label">Imagem de Perfil</label>
+    <div class="">
+    <input  name="imagem" type="file" />
+    </div>
+  </div>
+  
     <div class="form-group">
     <div class="">
       <button type="submit" class="btn btn-primary">Confirma</button>

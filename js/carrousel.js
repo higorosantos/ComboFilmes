@@ -41,6 +41,26 @@ function clearScrollComedia(){
   clearInterval(intervalo);
 };
 
+function scrollDireitaTerror(){
+  intervalo = setInterval(function(){ document.getElementById('terror').scrollLeft += 5 }  , 5);
+};
+function scrollEsquerdaTerror(){
+  intervalo = setInterval(function(){ document.getElementById('terror').scrollLeft -= 5 }  , 5);
+};
+function clearScrollTerror(){
+  clearInterval(intervalo);
+};
+
+function scrollDireitaDrama(){
+  intervalo = setInterval(function(){ document.getElementById('drama').scrollLeft += 5 }  , 5);
+};
+function scrollEsquerdaDrama(){
+  intervalo = setInterval(function(){ document.getElementById('drama').scrollLeft -= 5 }  , 5);
+};
+function clearScrollDrama(){
+  clearInterval(intervalo);
+};
+
 
 
 
